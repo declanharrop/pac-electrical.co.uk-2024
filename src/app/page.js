@@ -1,4 +1,4 @@
-import Version from '@/Components/Versions/Version';
+import Version from '@/Components/Version';
 import RequestForm from '@/Elements/RequestForm';
 
 export default function Page() {
