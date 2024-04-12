@@ -10,7 +10,7 @@ import Typography from '@/Styles/Typography.styles';
 //   },
 // );
 
-const APP_NAME = 'The Vault - Docs';
+const APP_NAME = 'Power & Control - Solar Experts';
 const APP_DEFAULT_TITLE = 'The Vault';
 const APP_TITLE_TEMPLATE = 'The Vault';
 const APP_DESCRIPTION = 'Documentation for Usage and Version Log';
