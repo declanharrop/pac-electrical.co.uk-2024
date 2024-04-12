@@ -1,11 +1,8 @@
 import NextTopLoader from 'nextjs-toploader';
 import { ApolloWrapper } from '../Utils/ApolloWrapper';
 import StyledComponentsRegistry from '../Utils/registry';
-import GlobalStyles from '../Styles/global.styles';
-import Typography from '../Styles/typography.styles';
-import { APIDataProvider } from '../Context/APIDataContext';
-import { MenuProvider } from '../Context/MenuContext';
-import Header from '@/Components/Header/Header';
+import Globalstyle from '@/Styles/Global.styles';
+import Typography from '@/Styles/Typography.styles';
 
 // const DynamicAPIDataProvider = dynamic(
 //   () => import('@/Context/APIDataContext').then((mod) => mod.APIDataProvider),
@@ -64,6 +61,26 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <title>{metadata.applicationName}</title>
+        <link rel="stylesheet" href="https://use.typekit.net/xml0rco.css" />
+        <link
+          rel="icon"
+          sizes="192x192"
+          href="/logo/pac-logo-electrical-reverse.svg"
+        />
+        <link
+          rel="apple-touch-icon"
+          href="/logo/pac-logo-electrical-reverse.svg"
+        />
+        <link
+          rel="mask-icon"
+          href="/logo/pac-logo-electrical-reverse.svg"
+          color="var(--navy)"
+        />
+        <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -71,21 +88,17 @@ export default function RootLayout({ children }) {
           crossOrigin="true"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet"
         />
       </head>
       <body>
         <NextTopLoader color="#74b570" />
         <StyledComponentsRegistry>
-          <GlobalStyles />
+          <Globalstyle />
           <Typography />
-          <ApolloWrapper>
-            <MenuProvider>
-              <Header />
-              <APIDataProvider>{children}</APIDataProvider>
-            </MenuProvider>
-          </ApolloWrapper>
+          <Header />
+          {children}
         </StyledComponentsRegistry>
       </body>
     </html>
