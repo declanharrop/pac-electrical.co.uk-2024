@@ -97,7 +97,6 @@ export default function RootLayout({ children }) {
         <StyledComponentsRegistry>
           <Globalstyle />
           <Typography />
-          <Header />
           {children}
         </StyledComponentsRegistry>
       </body>
