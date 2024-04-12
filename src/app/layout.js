@@ -1,5 +1,4 @@
 import NextTopLoader from 'nextjs-toploader';
-import { ApolloWrapper } from '../Utils/ApolloWrapper';
 import StyledComponentsRegistry from '../Utils/registry';
 import Globalstyle from '@/Styles/Global.styles';
 import Typography from '@/Styles/Typography.styles';
