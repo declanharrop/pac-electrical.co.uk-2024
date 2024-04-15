@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import Hero from '@/Components/Hero/Hero';
 
 export default function Callback() {
-  const Router = useRouter;
+  const router = useRouter;
   const encode = (data) =>
     Object.keys(data)
       .map(
@@ -25,7 +25,7 @@ export default function Callback() {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({ 'form-name': 'callback-form', ...data }),
     })
-      .then(() => Router.push('/information/success'))
+      .then(() => router.push('/information/success'))
       .catch((error) => alert(error));
 
     e.preventDefault();
