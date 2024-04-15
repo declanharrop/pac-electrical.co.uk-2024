@@ -37,6 +37,7 @@ const ThreeImageSectionStyles = styled.div`
     .overlay {
       padding: 30px 10px;
       position: relative;
+      height: 100%;
     }
     img {
       height: 160px;
@@ -65,11 +66,7 @@ const ImageSection = ({ data }) => (
       <h3>{data.title}</h3>
       <p>{data.text}</p>
       <Link href={data.link}>
-        <button
-          type="button"
-          className="sm-btn"
-          style={{ color: `${data.color}` }}
-        >
+        <button type="button" className="light-button">
           Explore
         </button>
       </Link>

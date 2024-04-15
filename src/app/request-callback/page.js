@@ -40,7 +40,9 @@ export default function Callback() {
         height="20vh"
         src="/images/page-images/renewables/solar7.jpg"
         alt="Get a Solar Quote today from Derby's Solar and Battery Storage experts"
-      />
+      >
+        <h1>Request a callback</h1>
+      </Hero>
       <form
         onSubmit={handleSubmit}
         method="post"
@@ -68,7 +70,7 @@ export default function Callback() {
           />
         </label>
         <button type="submit" name="submit">
-          Submit
+          Request a callback
         </button>
       </form>
     </>

@@ -63,14 +63,14 @@ const Globalstyle = createGlobalStyle`
     font-size: 1.7rem;
     padding: 14px 20px;
     border: 0;
-    background: white;
+    background: none;
     color: var(--navy);
+    border: 2px solid var(--navy);
     border-radius: 50px;
-    border: 2px solid white;
     letter-spacing: 0.07rem;
     cursor: pointer;
     &:hover {
-     background: none;
+     background: var(--navy);
      color: white;
     }
   }
@@ -93,6 +93,16 @@ const Globalstyle = createGlobalStyle`
     border: 2px solid var(--green);
     background: var(--green);
    }
+  }
+
+  .light-button {
+    background: none;
+    color: white;
+    border: 2px solid white;
+    &:hover {
+      background: white;
+      color: var(--green);
+    }
   }
 
   .buttons {
@@ -204,6 +214,68 @@ const Globalstyle = createGlobalStyle`
   }
 }
 
+
+
+// Forms
+
+  form {
+    margin: 50px auto 0;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    label {
+      margin-bottom: 20px;
+      width: 100%;
+    }
+    .select-container {
+      display: flex;
+      gap: 10px;
+      flex-direction: column;
+    }
+    textarea,
+    select,
+    input {
+      padding: 10px;
+      font-family: graphie, --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      letter-spacing: 0.05rem;
+      font-size: 1.6rem;
+      border: solid 1px rgb(180, 180, 180, 1);
+      border-radius: 5px;
+      outline: none;
+      width: 100%;
+      font-weight: 500;
+      color: var(--navy);
+    }
+    textarea {
+      min-height: 140px;
+    }
+    input::placeholder {
+      color: rgb(180, 180, 180, 1);
+      font-weight: 400;
+    }
+    textarea::placeholder {
+      color: rgb(180, 180, 180, 1);
+      font-weight: 400;
+    }
+    input:focus {
+      border: solid 1px var(--navy);
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+    select:focus {
+      border: solid 1px var(--navy);
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+    textarea:focus {
+      border: solid 1px var(--navy);
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+    input,
+    select {
+    }
+  }
 `;
 
 export default Globalstyle;
