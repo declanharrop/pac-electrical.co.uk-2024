@@ -6,52 +6,10 @@ import Footer from '@/Components/Footer/Footer';
 import Header from '@/Components/Header/Header';
 import { MenuProvider } from '@/Context/MenuContext';
 
-// const DynamicAPIDataProvider = dynamic(
-//   () => import('@/Context/APIDataContext').then((mod) => mod.APIDataProvider),
-//   {
-//     ssr: false,
-//   },
-// );
-
 const APP_NAME = 'Power & Control - Solar Experts';
-const APP_DEFAULT_TITLE = 'The Vault';
-const APP_TITLE_TEMPLATE = 'The Vault';
-const APP_DESCRIPTION = 'Documentation for Usage and Version Log';
 
 export const metadata = {
   applicationName: APP_NAME,
-  title: {
-    default: APP_DEFAULT_TITLE,
-    template: APP_TITLE_TEMPLATE,
-  },
-  description: APP_DESCRIPTION,
-  manifest: '/manifest.json',
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: 'default',
-    title: APP_DEFAULT_TITLE,
-    // startUpImage: [],
-  },
-  formatDetection: {
-    telephone: false,
-  },
-  openGraph: {
-    type: 'website',
-    siteName: APP_NAME,
-    title: {
-      default: APP_DEFAULT_TITLE,
-      template: APP_TITLE_TEMPLATE,
-    },
-    description: APP_DESCRIPTION,
-  },
-  twitter: {
-    card: 'summary',
-    title: {
-      default: APP_DEFAULT_TITLE,
-      template: APP_TITLE_TEMPLATE,
-    },
-    description: APP_DESCRIPTION,
-  },
 };
 
 export const viewport = {
@@ -95,6 +53,11 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
+        <form name="test-1-callback-form" netlify="true" hidden>
+          <input type="text" name="name" />
+          <input type="email" name="email" />
+          <input type="tel" name="phone" />
+        </form>
         <NextTopLoader color="#74b570" />
         <StyledComponentsRegistry>
           <Globalstyle />

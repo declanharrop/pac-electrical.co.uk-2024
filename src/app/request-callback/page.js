@@ -1,38 +1,8 @@
-'use client';
-
-import React, { useState } from 'react';
+import React from 'react';
 import Hero from '@/Components/Hero/Hero';
 import { QuoteFormStyles } from '@/Elements/Forms/QuoteForm.styles';
 
 export default function Callback() {
-  const encode = (data) =>
-    Object.keys(data)
-      .map(
-        (key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`,
-      )
-      .join('&');
-
-  const handleSubmit = (e) => {
-    const data = {
-      name: e.target.name.value,
-      email: e.target.email.value,
-      message: e.target.message.value,
-    };
-
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact-form', ...data }),
-    })
-      .then(() => alert('Success!'))
-      .catch((error) => alert(error));
-
-    e.preventDefault();
-  };
-
-  const handleChange = (e) =>
-    this.setState({ [e.target.name]: e.target.value });
-
   return (
     <>
       <Hero
@@ -45,25 +15,39 @@ export default function Callback() {
         </div>
       </Hero>
       <QuoteFormStyles>
-        <form name="callback-form" method="post" onSubmit={handleSubmit}>
-          <input type="hidden" name="callback-form" value="contact" />
-          <p>
-            <label>
-              Your Name: <input type="text" name="name" />
-            </label>
+        <form name="test-1-callback-form" method="post">
+          <input
+            type="hidden"
+            name="test-1-callback-form"
+            value="callback-form"
+          />
+          <p className="item">
+            <input
+              type="text"
+              name="name"
+              required
+              placeholder="Your Full Name"
+            />
+          </p>
+          <p className="item">
+            <input
+              type="text"
+              name="phone"
+              required
+              placeholder="Your Phone Number"
+            />
+          </p>
+          <p className="item">
+            <input
+              type="text"
+              name="email"
+              id="email"
+              required
+              placeholder="Your Email"
+            />
           </p>
           <p>
-            <label>
-              Your Email: <input type="email" name="email" />
-            </label>
-          </p>
-          <p>
-            <label>
-              Your Email: <input type="tel" name="number" />
-            </label>
-          </p>
-          <p>
-            <button type="submit">Send</button>
+            <button type="submit">Request a callback</button>
           </p>
         </form>
       </QuoteFormStyles>
