@@ -1,0 +1,37 @@
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 10px;
+  background-color: #ffffff;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .button-placer {
+    margin-left: 10px;
+  }
+
+  .mini-button {
+    padding: 10px 10px;
+    font-size: 1.4rem;
+    margin: 0 10px 0 0;
+  }
+
+  .accept-button {
+    margin: 0;
+
+    &:hover {
+      background: var(--green);
+      border: 2px solid var(--green);
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}

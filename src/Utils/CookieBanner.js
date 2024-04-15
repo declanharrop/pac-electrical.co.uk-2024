@@ -4,8 +4,10 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { getLocalStorage, setLocalStorage } from '@/Lib/storageHelper';
 
+import '@/Styles/cookie-banner.css';
+
 export default function CookieBanner() {
-  const [cookieConsent, setCookieConsent] = useState(false);
+  const [cookieConsent, setCookieConsent] = useState(null);
 
   useEffect(() => {
     const storedCookieConsent = getLocalStorage('cookie_consent', null);
@@ -23,27 +25,26 @@ export default function CookieBanner() {
     setLocalStorage('cookie_consent', cookieConsent);
   }, [cookieConsent]);
   return (
-    <div className="">
-      <div className="text-cente text-white-200">
+    <div className={`${cookieConsent != null ? 'hidden' : 'cookie-banner'}`}>
+      <div className="">
         <Link href="/info/cookies">
           <p>
-            We use <span className="font-bold text-sky-400">cookies</span> on
-            our site.
+            We use <span className="">cookies</span> on our site.
           </p>
         </Link>
       </div>
 
-      <div className="flex gap-2">
+      <div className="button-placer">
         <button
           type="button"
-          className="px-5 py-2 text-gray-300 rounded-md border-gray-900"
+          className="mini-button"
           onClick={() => setCookieConsent(false)}
         >
           Decline
         </button>
         <button
           type="button"
-          className="bg-gray-900 px-5 py-2 text-white-200 rounded-lg"
+          className="accept-button"
           onClick={() => setCookieConsent(true)}
         >
           Allow Cookies
