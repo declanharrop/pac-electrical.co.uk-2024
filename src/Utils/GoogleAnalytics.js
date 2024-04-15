@@ -14,7 +14,6 @@ export default function GoogleAnalytics({ GA_MEASUREMENT_ID }) {
 
     pageview(GA_MEASUREMENT_ID, url);
   }, [pathname, searchParams, GA_MEASUREMENT_ID]);
-
   return (
     <>
       <Script
@@ -33,7 +32,7 @@ export default function GoogleAnalytics({ GA_MEASUREMENT_ID }) {
                 gtag('consent', 'default', {
                     'analytics_storage': 'denied'
                 });
-                
+
                 gtag('config', '${GA_MEASUREMENT_ID}', {
                     page_path: window.location.pathname,
                 });
