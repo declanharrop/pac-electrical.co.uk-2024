@@ -16,7 +16,7 @@ export default function Callback() {
       </Hero>
       <QuoteFormStyles>
         <form
-          name="contact"
+          name="Request a callback"
           method="POST"
           data-netlify="true"
           netlify-honeypot="bot-field"
