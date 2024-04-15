@@ -5,23 +5,35 @@ import { useRouter } from 'next/navigation';
 import Hero from '@/Components/Hero/Hero';
 
 export default function Callback() {
-  const router = useRouter();
-  const { locale } = router;
+  const Router = useRouter;
+  const encode = (data) =>
+    Object.keys(data)
+      .map(
+        (key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`,
+      )
+      .join('&');
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = (e) => {
+    const data = {
+      name: e.target.name.value,
+      phone: e.target.phone.value,
+      email: e.target.email.value,
+    };
 
-    const myForm = event.target;
-    const formData = new FormData(myForm);
-
-    fetch(`/${locale}`, {
+    fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData).toString(),
+      body: encode({ 'form-name': 'callback-form', ...data }),
     })
-      .then(() => router.push('/information/success'))
+      .then(() => Router.push('/information/success'))
       .catch((error) => alert(error));
+
+    e.preventDefault();
   };
+
+  const handleChange = (e) =>
+    this.setState({ [e.target.name]: e.target.value });
+
   return (
     <>
       <Hero
