@@ -25,31 +25,37 @@ export default function CookieBanner() {
     setLocalStorage('cookie_consent', cookieConsent);
   }, [cookieConsent]);
   return (
-    <div className={`${cookieConsent != null ? 'hidden' : 'cookie-banner'}`}>
-      <div className="">
-        <Link href="/info/cookies">
-          <p>
-            We use <span className="">cookies</span> on our site.
-          </p>
-        </Link>
-      </div>
+    <div>
+      {window && (
+        <div
+          className={`${cookieConsent != null ? 'hidden' : 'cookie-banner'}`}
+        >
+          <div className="">
+            <Link href="/info/cookies">
+              <p>
+                We use <span className="">cookies</span> on our site.
+              </p>
+            </Link>
+          </div>
 
-      <div className="button-placer">
-        <button
-          type="button"
-          className="mini-button"
-          onClick={() => setCookieConsent(false)}
-        >
-          Decline
-        </button>
-        <button
-          type="button"
-          className="accept-button"
-          onClick={() => setCookieConsent(true)}
-        >
-          Allow Cookies
-        </button>
-      </div>
+          <div className="button-placer">
+            <button
+              type="button"
+              className="mini-button"
+              onClick={() => setCookieConsent(false)}
+            >
+              Decline
+            </button>
+            <button
+              type="button"
+              className="accept-button"
+              onClick={() => setCookieConsent(true)}
+            >
+              Allow Cookies
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
