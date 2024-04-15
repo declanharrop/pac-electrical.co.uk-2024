@@ -20,7 +20,7 @@ export default function Callback() {
           method="POST"
           data-netlify="true"
           netlify-honeypot="bot-field"
-          action="/information/success"
+          // action="/information/success"
         >
           <p className="hidden">
             <label>
