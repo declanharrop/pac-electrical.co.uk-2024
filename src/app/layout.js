@@ -1,4 +1,5 @@
 import NextTopLoader from 'nextjs-toploader';
+import { Suspense } from 'react';
 import StyledComponentsRegistry from '../Utils/registry';
 import Globalstyle from '@/Styles/Global.styles';
 import Typography from '@/Styles/Typography.styles';
@@ -21,7 +22,9 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <GoogleAnalytics GA_MEASUREMENT_ID="G-JN7204204E" />
+      <Suspense>
+        <GoogleAnalytics GA_MEASUREMENT_ID="G-JN7204204E" />
+      </Suspense>
       <head>
         <title>{metadata.applicationName}</title>
         <link rel="stylesheet" href="https://use.typekit.net/xml0rco.css" />

@@ -23,8 +23,8 @@ const Head = (props) => (
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" sizes="192x192" href="/favicon.ico" />
-    <link rel="apple-touch-icon" href="/static/favicon.ico" />
-    <link rel="mask-icon" href="/static/favicon.ico" color="var(--navy)" />
+    <link rel="apple-touch-icon" href="/favicon.ico" />
+    <link rel="mask-icon" href="/favicon.ico" color="var(--navy)" />
     <link rel="icon" href="/favicon.ico" />
     <meta property="og:url" content={props.url || defaultOGURL} />
     {props.title ? (
