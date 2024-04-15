@@ -1,13 +1,12 @@
 'use client';
 
 import Link from 'next/link';
-import Head from 'next/head';
 import { useEffect, useState } from 'react';
-import Hero from '../../Components/Hero/Hero';
-import ServiceTemplateStyles from '../../Templates/styles/ServiceTemplate.styles';
-import Skew from '../../Components/ContentSections/Skew';
-import FlexImageTextSection from '../../Components/ContentSections/FlexImageTextSection';
-import ColorButton from '../../Elements/ColorButton';
+import Head from '@/Elements/Head';
+import ServiceTemplateStyles from '@/Templates/styles/ServiceTemplate.styles';
+import Hero from '@/Components/Hero/Hero';
+import Skew from '@/Components/ContentSections/Skew';
+import FlexImageTextSection from '@/Components/ContentSections/FlexImageTextSection';
 
 export default function Grants() {
   const [width, setWidth] = useState();
