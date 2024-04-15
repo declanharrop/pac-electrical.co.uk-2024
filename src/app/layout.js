@@ -70,6 +70,7 @@ export default function RootLayout({ children }) {
           </MenuProvider>
           <CookieBanner />
         </StyledComponentsRegistry>
+        <div id="modal-root" />
       </body>
     </html>
   );
