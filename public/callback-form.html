@@ -1,18 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Callback Form</title>
+  <meta charset="utf-8">
+  <title>Netlify form</title>
 </head>
 
 <body>
   <!-- A little help for the Netlify post-processing bots -->
-  <form name="callback-form" netlify hidden>
-    <input type="text" name="name" />
-    <input type="email" name="email" />
-    <input type="tel" name="phone" />
+  <form name="callback-form" data-netlify="true" hidden>
+    <label for="name">Name:</label>
+    <input id="name" type="text" name="name" />
+
+    <label for="phone">Number:</label>
+    <input id="phone" type="text" name="phone" />
+
+    <label for="email">Email:</label>
+    <input id="email" type="email" name="email" />
+
+    <button type="submit" name='submit'>Submit</button>
+
   </form>
 </body>
 

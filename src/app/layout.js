@@ -53,11 +53,6 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <form name="test-1-callback-form" netlify="true" hidden>
-          <input type="text" name="name" />
-          <input type="email" name="email" />
-          <input type="tel" name="phone" />
-        </form>
         <NextTopLoader color="#74b570" />
         <StyledComponentsRegistry>
           <Globalstyle />

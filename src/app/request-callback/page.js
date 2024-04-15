@@ -1,56 +1,65 @@
+'use client';
+
 import React from 'react';
+import { useRouter } from 'next/navigation';
 import Hero from '@/Components/Hero/Hero';
-import { QuoteFormStyles } from '@/Elements/Forms/QuoteForm.styles';
 
 export default function Callback() {
+  const router = useRouter();
+  const { locale } = router;
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const myForm = event.target;
+    const formData = new FormData(myForm);
+
+    fetch(`/${locale}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => router.push('/thank-you'))
+      .catch((error) => alert(error));
+  };
   return (
     <>
       <Hero
         height="20vh"
         src="/images/page-images/renewables/solar7.jpg"
         alt="Get a Solar Quote today from Derby's Solar and Battery Storage experts"
+      />
+      <form
+        className="contacts-form"
+        onSubmit={handleSubmit}
+        method="post"
+        name="callback-form"
+        data-netlify="true"
       >
-        <div className="decorated-title">
-          <h1>Request a callback today</h1>
-        </div>
-      </Hero>
-      <QuoteFormStyles>
-        <form name="test-1-callback-form" method="post">
+        <input type="hidden" name="callback-form" value="contact" />
+        <label htmlFor="name" aria-label="Name">
+          <input type="text" name="name" id="name" placeholder="Name" />
+        </label>
+        <label htmlFor="phone" aria-label="Phone">
           <input
-            type="hidden"
-            name="test-1-callback-form"
-            value="callback-form"
+            type="text"
+            name="phone"
+            id="phone"
+            placeholder="Phone Number"
           />
-          <p className="item">
-            <input
-              type="text"
-              name="name"
-              required
-              placeholder="Your Full Name"
-            />
-          </p>
-          <p className="item">
-            <input
-              type="text"
-              name="phone"
-              required
-              placeholder="Your Phone Number"
-            />
-          </p>
-          <p className="item">
-            <input
-              type="text"
-              name="email"
-              id="email"
-              required
-              placeholder="Your Email"
-            />
-          </p>
-          <p>
-            <button type="submit">Request a callback</button>
-          </p>
-        </form>
-      </QuoteFormStyles>
+        </label>
+        <label htmlFor="email" aria-label="Email">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email Address"
+          />
+        </label>
+        <button type="submit" name="submit">
+          Submit
+        </button>
+      </form>
     </>
   );
 }
