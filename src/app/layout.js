@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Suspense>
-        <GoogleAnalytics GA_MEASUREMENT_ID="G-JN7204204E" />
+        <GoogleAnalytics GA_MEASUREMENT_ID="G-4PGFVJ14KH" />
       </Suspense>
       <head>
         <title>{metadata.applicationName}</title>
