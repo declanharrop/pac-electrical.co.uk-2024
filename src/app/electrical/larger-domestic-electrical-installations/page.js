@@ -1,12 +1,14 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import Data from 'data/electrical-data';
 import ServiceTemplate from '@/Templates/ServiceTemplate';
+import ElectricalData from '../../../../public/data/electrical-data';
 
 export default function LargerDomesticInstall() {
   const pathname = usePathname();
-  const serviceData = Data.filter((service) => service.slug === pathname);
+  const serviceData = ElectricalData.filter(
+    (service) => service.slug === pathname,
+  );
   return (
     <div>
       <ServiceTemplate data={serviceData} mainColor={serviceData[0].color} />
