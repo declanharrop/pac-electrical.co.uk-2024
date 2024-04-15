@@ -2,6 +2,9 @@ import NextTopLoader from 'nextjs-toploader';
 import StyledComponentsRegistry from '../Utils/registry';
 import Globalstyle from '@/Styles/Global.styles';
 import Typography from '@/Styles/Typography.styles';
+import Footer from '@/Components/Footer/Footer';
+import Header from '@/Components/Header/Header';
+import { MenuProvider } from '@/Context/MenuContext';
 
 // const DynamicAPIDataProvider = dynamic(
 //   () => import('@/Context/APIDataContext').then((mod) => mod.APIDataProvider),
@@ -96,7 +99,11 @@ export default function RootLayout({ children }) {
         <StyledComponentsRegistry>
           <Globalstyle />
           <Typography />
-          {children}
+          <MenuProvider>
+            <Header />
+            {children}
+            <Footer />
+          </MenuProvider>
         </StyledComponentsRegistry>
       </body>
     </html>
