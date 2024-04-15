@@ -1,6 +1,6 @@
-import HeroVideo from '../../Components/Hero/HeroVideo';
-import Head from '../../Elements/Head';
-import RechargePageStyles from '../../styles/RechargePage.styles';
+import HeroVideo from '@/Components/Hero/HeroVideo';
+import Head from '@/Elements/Head';
+import RechargePageStyles from '@/Styles/RechargePage.styles';
 
 export default function RechargePage() {
   return (

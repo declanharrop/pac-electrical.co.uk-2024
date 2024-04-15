@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import HeroVideo from '../../Components/Hero/HeroVideo';
-import Head from '../../Elements/Head';
-import SolarPageStyles from '../../styles/SolarPage.styles';
-import Button from '../../Elements/ColorButton';
+import HeroVideo from '@/Components/Hero/HeroVideo';
+import Head from '@/Elements/Head';
+import SolarPageStyles from '@/Styles/SolarPage.styles';
+import Button from '@/Elements/ColorButton';
 
 export default function SolarPage() {
   return (
