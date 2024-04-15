@@ -5,6 +5,8 @@ import Typography from '@/Styles/Typography.styles';
 import Footer from '@/Components/Footer/Footer';
 import Header from '@/Components/Header/Header';
 import { MenuProvider } from '@/Context/MenuContext';
+import GoogleAnalytics from '@/Utils/GoogleAnalytics';
+import CookieBanner from '@/Utils/CookieBanner';
 
 const APP_NAME = 'Power & Control - Solar Experts';
 
@@ -19,6 +21,7 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <GoogleAnalytics GA_MEASUREMENT_ID="G-JN7204204E" />
       <head>
         <title>{metadata.applicationName}</title>
         <link rel="stylesheet" href="https://use.typekit.net/xml0rco.css" />
@@ -62,6 +65,7 @@ export default function RootLayout({ children }) {
             {children}
             <Footer />
           </MenuProvider>
+          <CookieBanner />
         </StyledComponentsRegistry>
       </body>
     </html>
