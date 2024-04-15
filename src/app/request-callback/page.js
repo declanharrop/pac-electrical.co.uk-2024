@@ -19,7 +19,7 @@ export default function Callback() {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams(formData).toString(),
     })
-      .then(() => router.push('/thank-you'))
+      .then(() => router.push('/information/success'))
       .catch((error) => alert(error));
   };
   return (
@@ -30,13 +30,12 @@ export default function Callback() {
         alt="Get a Solar Quote today from Derby's Solar and Battery Storage experts"
       />
       <form
-        className="contacts-form"
         onSubmit={handleSubmit}
         method="post"
         name="callback-form"
         data-netlify="true"
       >
-        <input type="hidden" name="callback-form" value="contact" />
+        <input type="hidden" name="callback-form" value="callback-form" />
         <label htmlFor="name" aria-label="Name">
           <input type="text" name="name" id="name" placeholder="Name" />
         </label>
