@@ -43,7 +43,7 @@ export default function ReviewSearch() {
         name: filterState.name,
         stars: filterState.stars,
       },
-    }
+    },
   );
 
   const {
