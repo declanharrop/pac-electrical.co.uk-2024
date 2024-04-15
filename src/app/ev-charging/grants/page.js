@@ -7,7 +7,7 @@ import ServiceTemplateStyles from '@/Templates/styles/ServiceTemplate.styles';
 import Hero from '@/Components/Hero/Hero';
 import Skew from '@/Components/ContentSections/Skew';
 import FlexImageTextSection from '@/Components/ContentSections/FlexImageTextSection';
-import Button from '@/Elements/ColorButton';
+import ColorButton from '@/Elements/ColorButton';
 
 export default function Grants() {
   const [width, setWidth] = useState();
