@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import Hero from '@/Components/Hero/Hero';
 
 export default function Callback() {
-  const router = useRouter;
+  const router = useRouter();
   const encode = (data) =>
     Object.keys(data)
       .map(
