@@ -37,6 +37,7 @@ export default function ColorButton({
         color: `${colors.textColor}`,
         backgroundColor: `${colors.bgColor}`,
         boxShadow: `${boxShadow}`,
+        border: '',
       }}
     >
       {name}

@@ -1,12 +1,26 @@
 import { gql } from '@apollo/client';
 
-export const VERSION_QUERY = gql`
-  query Query {
-    appVersions(orderBy: publishedAt_DESC) {
+export const ALL_REVIEWS = gql`
+  query Reviews {
+    reviews {
       id
-      vDetails
-      vNumber
-      vSlug
+      name
+      sector
+      source
+      stars
+      content
+    }
+  }
+`;
+export const SEARCH_REVIEWS = gql`
+  query Reviews($sector: Tag) {
+    reviews(where: { sector: $sector }, first: 30) {
+      id
+      name
+      sector
+      source
+      stars
+      content
     }
   }
 `;

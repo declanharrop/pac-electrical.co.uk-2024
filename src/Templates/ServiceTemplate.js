@@ -56,8 +56,7 @@ export default function ServiceTemplate({
           <Link href={pageData.buttonLink}>
             <button
               type="button"
-              className={`${pageData.slug}-getaquote`}
-              style={{ color: `${mainColor}` }}
+              className={`${pageData.slug}-getaquote light-button`}
             >
               Get a Quote
             </button>
@@ -207,25 +206,19 @@ export default function ServiceTemplate({
           ))}
           <div className="buttons">
             <a href="tel:+441332552320">
-              <ColorButton
-                backgroundColor={pageData.color}
-                name="Call"
-                boxShadow={`${pageData.overlayColor} 0px 2px 12px 2px`}
-              />
+              <button type="button" className="">
+                Call
+              </button>
             </a>
             <a href="mailto:enquiries@pac-electrical.co.uk">
-              <ColorButton
-                backgroundColor={pageData.color}
-                name="Email"
-                boxShadow={`${pageData.overlayColor} 0px 2px 12px 2px`}
-              />
+              <button type="button" className="">
+                Email
+              </button>
             </a>
             <Link href={pageData.buttonLink}>
-              <ColorButton
-                backgroundColor={pageData.color}
-                name="Get a Quote"
-                boxShadow={`${pageData.overlayColor} 0px 2px 12px 2px`}
-              />
+              <button type="button" className="">
+                Get a quote
+              </button>
             </Link>
           </div>
         </div>
