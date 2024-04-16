@@ -110,9 +110,21 @@ export default function CaseStudyTemplate({ study }) {
           <div className="spacer-md" />
         </>
       )}
-      <Link href="/get-a-quote">
-        <ColorButton name="Get a Quote" />
-      </Link>
+      <div
+        className="buttons"
+        style={{ justifyContent: 'center', margin: '40px 0 0' }}
+      >
+        <Link href="/request-callback">
+          <button type="button" className="focus-button">
+            Request a callback
+          </button>
+        </Link>
+        <Link href="/get-a-quote">
+          <button type="button" className="secondary-button-alternate">
+            Get a quote
+          </button>
+        </Link>
+      </div>
       <div style={{ marginBottom: '40px' }} />
     </>
   );

@@ -1,4 +1,5 @@
-import React from 'react';
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import NewsArticleTemplateStyles from './styles/NewsArticleTemplate.styles';
@@ -8,7 +9,6 @@ import formatDate from '../Lib/formatDate';
 import ColorButton from '../Elements/ColorButton';
 
 export default function NewsArticleTemplate({ data }) {
-  console.log(data);
   return (
     <>
       <Head
@@ -67,9 +67,21 @@ export default function NewsArticleTemplate({ data }) {
         {data.slideshow.length >= 1 && (
           <CaseStudySlider content={data.slideshow} />
         )}
-        <Link href="/get-a-quote">
-          <ColorButton name="Get a Quote" />
-        </Link>
+        <div
+          className="buttons"
+          style={{ justifyContent: 'center', margin: '40px 0 0' }}
+        >
+          <Link href="/request-callback">
+            <button type="button" className="focus-button">
+              Request a callback
+            </button>
+          </Link>
+          <Link href="/get-a-quote">
+            <button type="button" className="secondary-button-alternate">
+              Get a quote
+            </button>
+          </Link>
+        </div>
       </NewsArticleTemplateStyles>
     </>
   );

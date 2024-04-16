@@ -182,3 +182,142 @@ export const CASE_STUDY = gql`
     }
   }
 `;
+
+export const FEATURED_NEWS_STORY = gql`
+  query FeaturedQuery {
+    articles(orderBy: date_DESC, first: 1) {
+      date
+      id
+      title
+      tag
+      subtitle
+      metaDescription
+      slug
+      hero {
+        url(transformation: { document: { output: { format: webp } } })
+      }
+      content {
+        html
+      }
+    }
+  }
+`;
+export const RECENT_NEWS_STORIES = gql`
+  query RecentQuery {
+    articles(orderBy: date_DESC, first: 3, skip: 1) {
+      date
+      id
+      title
+      tag
+      subtitle
+      metaDescription
+      slug
+      hero {
+        url(
+          transformation: {
+            document: { output: { format: webp } }
+            image: { resize: { width: 400 } }
+          }
+        )
+      }
+      content {
+        html
+      }
+    }
+  }
+`;
+export const REMAINING_NEWS_STORIES = gql`
+  query AllQuery {
+    articles(orderBy: date_DESC, first: 20, skip: 4) {
+      date
+      id
+      title
+      tag
+      subtitle
+      metaDescription
+      slug
+      hero {
+        url(
+          transformation: {
+            document: { output: { format: webp } }
+            image: { resize: { width: 200 } }
+          }
+        )
+      }
+      content {
+        html
+      }
+    }
+  }
+`;
+
+export const NEWS_STORY = gql`
+  query Articles($slug: String!) {
+    articles(where: { slug: $slug }) {
+      date
+      id
+      title
+      heroAlt
+      tag
+      ytVideo
+      subtitle
+      metaDescription
+      slug
+      hero {
+        url(transformation: { document: { output: { format: webp } } })
+      }
+      content {
+        html
+      }
+      slideshow {
+        id
+        url(transformation: { document: { output: { format: webp } } })
+      }
+    }
+  }
+`;
+
+export const RECENT_JOBS = gql`
+  query Jobs {
+    jobs(orderBy: date_DESC, skip: 0, first: 3) {
+      id
+      title
+      slug
+      metaDesc
+      hero {
+        url(
+          transformation: {
+            document: { output: { format: webp } }
+            image: { resize: { width: 500 } }
+          }
+        )
+      }
+      introduction
+      content {
+        html
+      }
+    }
+  }
+`;
+export const ALL_JOBS = gql`
+  query Jobs {
+    jobs(orderBy: date_DESC, skip: 3, first: 20) {
+      id
+      title
+      slug
+      metaDesc
+      hero {
+        url(
+          transformation: {
+            document: { output: { format: webp } }
+            image: { resize: { width: 500 } }
+          }
+        )
+      }
+      introduction
+      content {
+        html
+      }
+    }
+  }
+`;

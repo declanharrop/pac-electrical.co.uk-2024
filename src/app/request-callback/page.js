@@ -3,6 +3,7 @@
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import Hero from '@/Components/Hero/Hero';
+import Head from '@/Elements/Head';
 
 export default function Callback() {
   const router = useRouter();
@@ -36,12 +37,19 @@ export default function Callback() {
 
   return (
     <>
+      <Head
+        title="Request a callback | Power and Control"
+        description="Contact us for a free Electrical, EV Charger, Solar and Battery Storage, no-obligation quote today."
+        url="https://pac-electrical.co.uk/request-callback"
+      />
       <Hero
         height="20vh"
         src="/images/page-images/renewables/solar7.jpg"
         alt="Get a Solar Quote today from Derby's Solar and Battery Storage experts"
       >
-        <h1>Request a callback</h1>
+        <div className="decorated-title">
+          <h1>Request a callback</h1>
+        </div>
       </Hero>
       <form
         onSubmit={handleSubmit}

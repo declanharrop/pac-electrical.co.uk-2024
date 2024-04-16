@@ -12,7 +12,5 @@ export default async function CaseStudy({ params }) {
       slug: pathname,
     },
   });
-
-  console.log(study);
   return <CaseStudyTemplate study={study.caseStudies[0]} />;
 }

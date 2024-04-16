@@ -1,13 +1,4 @@
-// Import Swiper React components
-// import { Swiper, SwiperSlide } from 'swiper/react';
-// import { Navigation, EffectCoverflow } from 'swiper/modules';
 import { CaseStudySliderStyles } from './Slider.styles';
-
-// Import Swiper styles
-// import 'swiper/css';
-// import 'swiper/css/navigation';
-
-// import required modules
 
 export default function CaseStudySlider({ content }) {
   return (

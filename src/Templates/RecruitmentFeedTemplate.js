@@ -1,10 +1,12 @@
-import React from 'react';
 import RecruitmentFeedTemplateStyles from './styles/RecruitmentFeedTemplate.styles';
 import ThreeStorySection from '../Components/FeatureSections/ThreeStorySection';
 import GeneralStorySection from '../Components/FeatureSections/GeneralStorySection';
 import Head from '../Elements/Head';
 
-export default function RecruitmentTemplate({ recentJobsData, allJobsData }) {
+export default function RecruitmentFeedTemplate({
+  recentJobsData,
+  allJobsData,
+}) {
   return (
     <>
       <Head

@@ -53,14 +53,26 @@ export default function ServiceTemplate({
       >
         <div className="standard-title">
           <h1>{pageData.page}</h1>
-          <Link href={pageData.buttonLink}>
-            <button
-              type="button"
-              className={`${pageData.slug}-getaquote light-button`}
-            >
-              Get a Quote
-            </button>
-          </Link>
+          <div className="buttons">
+            <Link href="/request-callback">
+              <button
+                aria-label="Request a callback"
+                type="button"
+                className="home-callback secondary-button"
+              >
+                Request a callback
+              </button>
+            </Link>
+            <Link href="/get-a-quote">
+              <button
+                aria-label="Get a quote"
+                type="button"
+                className="home-getaquote focus-button"
+              >
+                Get a quote
+              </button>
+            </Link>
+          </div>
         </div>
       </Hero>
       <Accreds />

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const HeroStyles = styled.div`
   position: relative;
-  min-height: 500px;
+  min-height: 400px;
   max-height: 700px;
   .hero-image {
     position: relative;
@@ -14,7 +14,7 @@ const HeroStyles = styled.div`
     overflow: hidden;
   }
   .overlay {
-    min-height: 500px;
+    min-height: 400px;
     max-height: 700px;
     position: absolute;
     top: 0;
@@ -27,7 +27,7 @@ const HeroStyles = styled.div`
       align-items: center;
       justify-content: flex-start;
       display: flex;
-      max-width: 1400px;
+      max-width: 1200px;
       text-align: left;
       margin: 0 auto;
       .standard-title {

@@ -95,6 +95,16 @@ const Globalstyle = createGlobalStyle`
    }
   }
 
+  .secondary-button-alternate {
+   background: none;
+   border: 2px solid var(--green);
+   color: var(--green);
+   &:hover {
+    border: 2px solid var(--green);
+    background: var(--green);
+   }
+  }
+
   .light-button {
     background: none;
     color: white;
@@ -221,7 +231,7 @@ const Globalstyle = createGlobalStyle`
   form {
     margin: 50px auto 0;
     width: 100%;
-    max-width: 800px;
+    max-width: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
