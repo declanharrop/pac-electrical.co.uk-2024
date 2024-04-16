@@ -28,7 +28,7 @@ export default function GetAQuote() {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'callback-form', ...data }),
+      body: encode({ 'form-name': 'get-a-quote-form', ...data }),
     })
       .then(() => router.push('/information/success'))
       .catch((error) => alert(error));
