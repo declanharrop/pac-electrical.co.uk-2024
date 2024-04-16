@@ -11,7 +11,6 @@ import LatestStoryStudy from './LatestStoryStudy';
 export default function Footer({ data }) {
   const [active, setActive] = useState(false);
   const pathname = usePathname();
-  console.log(pathname);
 
   useEffect(() => {
     if (
