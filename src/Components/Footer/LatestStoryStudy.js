@@ -1,11 +1,8 @@
-import { useContext, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { APIDataContext } from '../../Context/APIDataContext';
 import { LatestStoryStudyStyles } from './Footer.styles';
 
-export default function LatestStoryStudy() {
-  const { data } = useContext(APIDataContext);
-
+export default function LatestStoryStudy({ data }) {
   const [LatestStory, setLatestStory] = useState();
   const [LatestStudy, setLatestStudy] = useState();
   useEffect(() => {

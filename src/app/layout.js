@@ -9,6 +9,8 @@ import Header from '@/Components/Header/Header';
 import { MenuProvider } from '@/Context/MenuContext';
 import GoogleAnalytics from '@/Utils/GoogleAnalytics';
 import CookieBanner from '@/Utils/CookieBanner';
+import { getClient } from '@/Lib/client';
+import { LATEST_NEWS_DATA } from '@/Lib/queries';
 
 const APP_NAME = 'Power & Control - Solar Experts';
 
@@ -20,7 +22,13 @@ export const viewport = {
   themeColor: '#FFFFFF',
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const client = getClient();
+
+  const { data: featuredNewsData } = await client.query({
+    query: LATEST_NEWS_DATA,
+  });
+
   register();
   return (
     <html lang="en">
@@ -69,7 +77,7 @@ export default function RootLayout({ children }) {
           <MenuProvider>
             <Header />
             {children}
-            <Footer />
+            <Footer data={featuredNewsData} />
           </MenuProvider>
           <CookieBanner />
         </StyledComponentsRegistry>

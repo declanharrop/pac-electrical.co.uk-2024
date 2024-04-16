@@ -1,22 +1,32 @@
 'use client';
 
-import React from 'react';
-import { useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
+import { use, useState, useEffect } from 'react';
 import { FooterStyles } from './Footer.styles';
 import LogoSection from './LogoSection';
 import Contact from './Contact';
 import Sitemap from './Sitemap';
-// import LatestStoryStudy from './LatestStoryStudy';
+import LatestStoryStudy from './LatestStoryStudy';
 
-export default function Footer() {
-  const router = useRouter();
-  const NotShowing =
-    router.pathname === '/' ||
-    router.pathname === '/case-studies' ||
-    router.pathname === '/news';
+export default function Footer({ data }) {
+  const [active, setActive] = useState(false);
+  const pathname = usePathname();
+  console.log(pathname);
+
+  useEffect(() => {
+    if (
+      pathname === '/' ||
+      pathname === '/case-studies' ||
+      pathname === '/news'
+    ) {
+      setActive(false);
+    } else {
+      setActive(true);
+    }
+  }, [pathname]);
   return (
     <>
-      {/* {!NotShowing && <LatestStoryStudy />} */}
+      {active && <LatestStoryStudy data={data} />}
       <FooterStyles>
         <div className="stripe">
           <svg height="100%" width="100%">
