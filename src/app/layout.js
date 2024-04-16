@@ -1,5 +1,6 @@
 import NextTopLoader from 'nextjs-toploader';
 import { Suspense } from 'react';
+import { register } from 'swiper/element/bundle';
 import StyledComponentsRegistry from '../Utils/registry';
 import Globalstyle from '@/Styles/Global.styles';
 import Typography from '@/Styles/Typography.styles';
@@ -20,6 +21,7 @@ export const viewport = {
 };
 
 export default function RootLayout({ children }) {
+  register();
   return (
     <html lang="en">
       <Suspense>
@@ -57,6 +59,7 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet"
         />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js" />
       </head>
       <body>
         <NextTopLoader color="#74b570" />

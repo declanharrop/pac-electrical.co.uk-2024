@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import CaseStudyTemplateStyles from './styles/CaseStudyTemplate.styles';
 import formatDate from '../Lib/formatDate';

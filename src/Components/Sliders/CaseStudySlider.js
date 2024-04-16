@@ -1,24 +1,23 @@
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, EffectCoverflow } from 'swiper';
+// import { Swiper, SwiperSlide } from 'swiper/react';
+// import { Navigation, EffectCoverflow } from 'swiper/modules';
 import { CaseStudySliderStyles } from './Slider.styles';
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
+// import 'swiper/css';
+// import 'swiper/css/navigation';
 
 // import required modules
 
 export default function CaseStudySlider({ content }) {
-  console.log(content);
   return (
     <CaseStudySliderStyles>
-      <Swiper
+      <swiper-container
         slidesPerView="auto"
-        navigation
+        navigation="true"
+        pagination="true"
         effect="coverflow"
         loop
-        modules={[Navigation, EffectCoverflow]}
         className="mySwiper"
         centeredSlides
         // spaceBetween={30}
@@ -31,11 +30,11 @@ export default function CaseStudySlider({ content }) {
         }}
       >
         {content.map((slide) => (
-          <SwiperSlide key={slide.id}>
+          <swiper-slide key={slide.id}>
             <img src={slide.url} alt="" />
-          </SwiperSlide>
+          </swiper-slide>
         ))}
-      </Swiper>
+      </swiper-container>
     </CaseStudySliderStyles>
   );
 }
