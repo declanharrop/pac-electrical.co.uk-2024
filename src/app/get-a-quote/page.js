@@ -18,7 +18,7 @@ export default function GetAQuote() {
       name: e.target.name.value,
       phone: e.target.phone.value,
       email: e.target.email.value,
-      sector: e.target.whatservice.value,
+      whatservice: e.target.whatservice.value,
       addressline1: e.target.addressline1.value,
       postcode: e.target.postcode.value,
       wheredidyouhear: e.target.wheredidyouhear.value,
