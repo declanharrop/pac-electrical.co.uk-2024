@@ -27,11 +27,9 @@ export default function CookieBanner() {
   return (
     <div className={`${cookieConsent != null ? 'hidden' : 'cookie-banner'}`}>
       <div className="">
-        <Link href="/info/cookies">
-          <p>
-            We use <span className="">cookies</span> on our site.
-          </p>
-        </Link>
+        {/* <Link href="/info/cookies"> */}
+        <p>We use cookies on our site.</p>
+        {/* </Link> */}
       </div>
 
       <div className="button-placer">
