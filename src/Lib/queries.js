@@ -321,3 +321,23 @@ export const ALL_JOBS = gql`
     }
   }
 `;
+
+export const JOB = gql`
+  query jobs($slug: String!) {
+    jobs(where: { slug: $slug }) {
+      id
+      title
+      slug
+      metaDesc
+      hero {
+        url(transformation: { document: { output: { format: webp } } })
+      }
+      introduction
+      date
+      applyLink
+      content {
+        html
+      }
+    }
+  }
+`;

@@ -18,6 +18,11 @@ export default function GetAQuote() {
       name: e.target.name.value,
       phone: e.target.phone.value,
       email: e.target.email.value,
+      sector: e.target.whatservice.value,
+      addressline1: e.target.addressline1.value,
+      postcode: e.target.postcode.value,
+      wheredidyouhear: e.target.wheredidyouhear.value,
+      works: e.target.works.value,
     };
 
     fetch('/', {
@@ -53,9 +58,9 @@ export default function GetAQuote() {
         data-netlify="true"
       >
         <input type="hidden" name="get-a-quote-form" value="get-a-quote-form" />
-        <label htmlFor="what-service" aria-label="Service Required">
+        <label htmlFor="whatservice" aria-label="Service Required">
           <p>What service do you require?</p>
-          <select id="what-service" name="what-service" required>
+          <select id="whatservice" name="whatservice" required>
             <option value="google">Solar PV</option>
             <option value="wom">EV Charging</option>
             <option value="leaflet">Electrical</option>
@@ -88,11 +93,11 @@ export default function GetAQuote() {
             required
           />
         </label>
-        <label htmlFor="address-line-1" aria-label="Adddress Line 1">
+        <label htmlFor="addressline1" aria-label="Adddress Line 1">
           <input
             type="text"
-            name="address-line-1"
-            id="address-line-1"
+            name="addressline1"
+            id="addressline1"
             placeholder="Address Line 1"
             required
           />
@@ -107,11 +112,11 @@ export default function GetAQuote() {
           />
         </label>
         <label
-          htmlFor="where-did-you-hear"
+          htmlFor="wheredidyouhear"
           aria-label="Where did you hear about us?"
         >
           <p>Where did you hear about us?</p>
-          <select id="where-did-you-hear" name="where-did-you-hear" required>
+          <select id="wheredidyouhear" name="wheredidyouhear" required>
             <option value="google">Google</option>
             <option value="wom">Word of Mouth</option>
             <option value="leaflet">Leaflet</option>
