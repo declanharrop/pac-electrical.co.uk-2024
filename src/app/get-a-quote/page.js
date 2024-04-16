@@ -61,9 +61,9 @@ export default function GetAQuote() {
         <label htmlFor="whatservice" aria-label="Service Required">
           <p>What service do you require?</p>
           <select id="whatservice" name="whatservice" required>
-            <option value="google">Solar PV</option>
-            <option value="wom">EV Charging</option>
-            <option value="leaflet">Electrical</option>
+            <option value="solar">Solar PV</option>
+            <option value="evcharging">EV Charging</option>
+            <option value="electrical">Electrical</option>
           </select>
         </label>
         <label htmlFor="name" aria-label="Name">
@@ -138,7 +138,7 @@ export default function GetAQuote() {
           />
         </label>
         <button type="submit" name="submit">
-          Request a callback
+          Get A Quote
         </button>
       </form>
     </>

@@ -9,47 +9,44 @@
 <body>
   <!-- A little help for the Netlify post-processing bots -->
   <form name="get-a-quote-form" data-netlify="true" hidden>
-    <label htmlFor="what-service" aria-label="Service Required">
-      <p>What service do you require?</p>
-      <select id="what-service" name="what-service" required>
-        <option value="google">Solar PV</option>
-        <option value="wom">EV Charging</option>
-        <option value="leaflet">Electrical</option>
-      </select>
-    </label>
-    <label htmlFor="name" aria-label="Name">
-      <input type="text" name="name" id="name" placeholder="Name" required />
-    </label>
-    <label htmlFor="phone" aria-label="Phone">
-      <input type="text" name="phone" id="phone" placeholder="Phone Number" required />
-    </label>
-    <label htmlFor="email" aria-label="Email">
-      <input type="email" name="email" id="email" placeholder="Email Address" required />
-    </label>
-    <label htmlFor="address-line-1" aria-label="Adddress Line 1">
-      <input type="text" name="address-line-1" id="address-line-1" placeholder="Address Line 1" required />
-    </label>
-    <label htmlFor="postcode" aria-label="Postcode">
-      <input type="text" name="postcode" id="postcode" placeholder="Postcode" required />
-    </label>
-    <label htmlFor="where-did-you-hear" aria-label="Where did you hear about us?">
-      <p>Where did you hear about us?</p>
-      <select id="where-did-you-hear" name="where-did-you-hear" required>
-        <option value="google">Google</option>
-        <option value="wom">Word of Mouth</option>
-        <option value="leaflet">Leaflet</option>
-        <option value="van-ad">Van Advert</option>
-        <option value="tat">Trust a Trader</option>
-        <option value="facebook">Facebook</option>
-        <option value="linkedin">Linked In</option>
-        <option value="reh">Renewable Energy Hub</option>
-        <option value="ee">Edmunson Electrical</option>
-        <option value="other">Other...</option>
-      </select>
-    </label>
-    <label for="works" aria-label="Works">
-      <textarea name="works" id="works" required placeholder="Let us know any details about the job"></textarea>
-    </label>
+
+    <label for="what-service">What Service:</label>
+    <select id="what-service" name="what-service">
+      <option value="google">Solar PV</option>
+      <option value="wom">EV Charging</option>
+      <option value="leaflet">Electrical</option>
+    </select>
+
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" />
+
+    <label for="phone">Phone:</label>
+    <input type="text" name="phone" id="phone" />
+
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" />
+
+    <label for="address-line-1">Address Line 1:</label>
+    <input type="text" name="address-line-1" id="address-line-1" />
+
+    <label for="postcode">Postcode:</label>
+    <input type="text" name="postcode" id="postcode" />
+
+    <label for="where-did-you-hear">Where did you hear about us?</label>
+    <select id="where-did-you-hear" name="where-did-you-hear">
+      <option value="google">Google</option>
+      <option value="wom">Word of Mouth</option>
+      <option value="leaflet">Leaflet</option>
+      <option value="van-ad">Van Advert</option>
+      <option value="tat">Trust a Trader</option>
+      <option value="facebook">Facebook</option>
+      <option value="linkedin">Linked In</option>
+      <option value="reh">Renewable Energy Hub</option>
+      <option value="ee">Edmunson Electrical</option>
+      <option value="other">Other...</option>
+    </select>
+    <label for="works">Works?</label>
+    <textarea name="works" id="works"></textarea>
 
     <button type="submit" name='submit'>Submit</button>
 

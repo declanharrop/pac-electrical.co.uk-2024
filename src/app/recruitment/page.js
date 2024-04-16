@@ -12,8 +12,6 @@ export default async function index() {
     query: ALL_JOBS,
   });
 
-  console.log(recentJobsData.jobs);
-
   return (
     <div>
       <RecruitmentFeedTemplate
