@@ -1,13 +1,11 @@
+'use client';
+
 import React, { useContext, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { LatestNewsHomeStyles } from './LatestNews.styles';
-import { APIDataContext } from '../../Context/APIDataContext';
 import ThreeStorySection from '../FeatureSections/ThreeStorySection';
-import Loading from '../../Elements/Loading';
 
-export default function LatestNewsHome() {
-  const { data } = useContext(APIDataContext);
-
+export default function LatestNewsHome({ data }) {
   const [FirstArticle, setFirstArticle] = useState();
   const [PreviousThreeArticles, setPreviousThreeArticles] = useState();
 

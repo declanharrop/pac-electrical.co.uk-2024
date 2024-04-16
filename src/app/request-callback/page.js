@@ -59,7 +59,13 @@ export default function Callback() {
       >
         <input type="hidden" name="callback-form" value="callback-form" />
         <label htmlFor="name" aria-label="Name">
-          <input type="text" name="name" id="name" placeholder="Name" />
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Name"
+            required
+          />
         </label>
         <label htmlFor="phone" aria-label="Phone">
           <input
@@ -67,6 +73,7 @@ export default function Callback() {
             name="phone"
             id="phone"
             placeholder="Phone Number"
+            required
           />
         </label>
         <label htmlFor="email" aria-label="Email">

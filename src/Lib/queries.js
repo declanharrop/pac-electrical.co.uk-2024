@@ -341,3 +341,60 @@ export const JOB = gql`
     }
   }
 `;
+
+export const LATEST_NEWS_DATA = gql`
+  query StoryData {
+    articles(orderBy: date_DESC, first: 4) {
+      date
+      id
+      title
+      tag
+      subtitle
+      metaDescription
+      slug
+      hero {
+        url(transformation: { document: { output: { format: webp } } })
+      }
+      content {
+        html
+      }
+    }
+    caseStudies(orderBy: date_DESC, first: 1) {
+      id
+      title
+      slug
+      metaDesc
+      hero {
+        url(
+          transformation: {
+            document: { output: { format: webp } }
+            image: { resize: { width: 1200 } }
+          }
+        )
+      }
+      introduction
+      date
+      client
+      sector
+      technology
+      systemSize
+      paybackPeriod
+      savings
+      annualOutput
+      co2Savings
+      slideshow {
+        id
+        url(
+          transformation: {
+            image: { resize: { width: 500 } }
+            document: { output: { format: webp } }
+          }
+        )
+      }
+      content {
+        html
+      }
+      tag
+    }
+  }
+`;
