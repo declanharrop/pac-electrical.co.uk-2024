@@ -30,7 +30,7 @@ export default function GetAQuote() {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({ 'form-name': 'get-a-quote-form', ...data }),
     })
-      .then(() => router.push('/information/success'))
+      .then(() => router.push('/whats-next'))
       .catch((error) => alert(error));
 
     e.preventDefault();
