@@ -229,8 +229,9 @@ const Globalstyle = createGlobalStyle`
 // Forms
 
   form {
-    margin: 50px auto 0;
+    margin: 50px auto;
     width: 100%;
+    padding: 0 20px;
     max-width: 600px;
     display: flex;
     flex-direction: column;
@@ -247,27 +248,27 @@ const Globalstyle = createGlobalStyle`
     textarea,
     select,
     input {
-      padding: 10px;
+      padding: 10px 20px;
       font-family: graphie, --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
         Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       letter-spacing: 0.05rem;
-      font-size: 1.6rem;
-      border: solid 1px rgb(180, 180, 180, 1);
-      border-radius: 5px;
+      font-size: 1.7rem;
+      border: solid 1px rgb(150, 150, 150, 1);
+      border-radius: 50px;
       outline: none;
       width: 100%;
-      font-weight: 500;
+      font-weight: 600;
       color: var(--navy);
     }
     textarea {
       min-height: 140px;
     }
     input::placeholder {
-      color: rgb(180, 180, 180, 1);
+      color: rgb(150, 150, 150, 1);
       font-weight: 400;
     }
     textarea::placeholder {
-      color: rgb(180, 180, 180, 1);
+      color: rgb(150, 150, 150, 1);
       font-weight: 400;
     }
     input:focus {
