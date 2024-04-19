@@ -18,6 +18,9 @@ export default function CookieBanner() {
     const newValue = cookieConsent ? 'granted' : 'denied';
 
     window.gtag('consent', 'update', {
+      ad_user_data: newValue,
+      ad_personalization: newValue,
+      ad_storage: newValue,
       analytics_storage: newValue,
     });
 
