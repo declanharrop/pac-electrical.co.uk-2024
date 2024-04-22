@@ -398,3 +398,41 @@ export const LATEST_NEWS_DATA = gql`
     }
   }
 `;
+
+export const ALL_NEWS_DATA = gql`
+  query AllNewsData {
+    articles(orderBy: date_DESC, first: 1000) {
+      date
+      id
+      title
+      tag
+      subtitle
+      metaDescription
+      slug
+      hero {
+        url(transformation: { document: { output: { format: webp } } })
+      }
+      content {
+        html
+      }
+    }
+  }
+`;
+
+export const ALL_STUDIES_DATA = gql`
+  query AllStudiesData {
+    caseStudies(orderBy: date_DESC, first: 1000) {
+      date
+      id
+      title
+      tag
+      slug
+      hero {
+        url(transformation: { document: { output: { format: webp } } })
+      }
+      content {
+        html
+      }
+    }
+  }
+`;

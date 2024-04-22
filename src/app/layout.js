@@ -32,10 +32,11 @@ export default async function RootLayout({ children }) {
   register();
   return (
     <html lang="en">
-      <Suspense>
-        <GoogleAnalytics GA_MEASUREMENT_ID="G-JN7204204E" />
-      </Suspense>
+      {/* <Suspense> */}
+      <GoogleAnalytics GA_MEASUREMENT_ID="G-JN7204204E" />
+      {/* </Suspense> */}
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <title>{metadata.applicationName}</title>
         <link rel="stylesheet" href="https://use.typekit.net/xml0rco.css" />
         <link
@@ -52,7 +53,6 @@ export default async function RootLayout({ children }) {
           href="/logo/pac-logo-electrical-reverse.svg"
           color="var(--navy)"
         />
-        <link rel="icon" href="/favicon.ico" />
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/icon?family=Material+Icons"
