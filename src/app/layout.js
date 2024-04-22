@@ -32,9 +32,9 @@ export default async function RootLayout({ children }) {
   register();
   return (
     <html lang="en">
-      {/* <Suspense> */}
-      <GoogleAnalytics GA_MEASUREMENT_ID="G-JN7204204E" />
-      {/* </Suspense> */}
+      <Suspense>
+        <GoogleAnalytics GA_MEASUREMENT_ID="G-JN7204204E" />
+      </Suspense>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <title>{metadata.applicationName}</title>
