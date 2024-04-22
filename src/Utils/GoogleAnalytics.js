@@ -2,7 +2,7 @@
 
 import Script from 'next/script';
 import { usePathname, useSearchParams } from 'next/navigation';
-import { useEffect } from 'react';
+import { Suspense, useEffect } from 'react';
 import { pageview } from '@/Lib/gtagHelper';
 
 export default function GoogleAnalytics({ GA_MEASUREMENT_ID }) {
