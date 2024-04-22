@@ -26,23 +26,23 @@ export async function GET() {
     pubDate: new Date(),
   });
 
-  newsPages.articles.map((article) => {
+  newsPages.articles.map((article) =>
     feed.item({
       title: article.title,
       guid: `https://pac-electrical.co.uk/news/${article.slug}`,
       url: `https://pac-electrical.co.uk/news/${article.slug}`,
       date: article.date,
-    });
-  });
+    }),
+  );
 
-  caseStudyPages.caseStudies.map((studies) => {
+  caseStudyPages.caseStudies.map((studies) =>
     feed.item({
       title: studies.title,
       guid: `https://pac-electrical.co.uk/news/${studies.slug}`,
       url: `https://pac-electrical.co.uk/news/${studies.slug}`,
       date: studies.date,
-    });
-  });
+    }),
+  );
 
   return new Response(feed.xml({ indent: true }), {
     headers: {
