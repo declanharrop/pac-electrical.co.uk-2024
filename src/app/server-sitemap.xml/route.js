@@ -1,3 +1,4 @@
+import { getServerSideSitemapIndex } from 'next-sitemap';
 import { getClient } from '@/Lib/client';
 import { ALL_NEWS_DATA, ALL_STUDIES_DATA } from '@/Lib/queries';
 
@@ -21,5 +22,5 @@ export default async function generateSitemap() {
     lastmod: article.date,
   }));
 
-  return [...news, ...studies];
+  return getServerSideSitemapIndex([...news, ...studies]);
 }
