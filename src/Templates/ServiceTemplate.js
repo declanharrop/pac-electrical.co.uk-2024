@@ -9,7 +9,6 @@ import Head from '@/Elements/Head';
 import Hero from '@/Components/Hero/Hero';
 import FlexImageTextSection from '@/Components/ContentSections/FlexImageTextSection';
 import ServiceTemplateStyles from './styles/ServiceTemplate.styles';
-import ColorButton from '@/Elements/ColorButton';
 import Accordian from '@/Components/Accordian/Accordian';
 import Modal from '@/Elements/Modal/Modal';
 import { MenuContext } from '@/Context/MenuContext';

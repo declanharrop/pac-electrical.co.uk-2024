@@ -12,10 +12,36 @@ import CookieBanner from '@/Utils/CookieBanner';
 import { getClient } from '@/Lib/client';
 import { LATEST_NEWS_DATA } from '@/Lib/queries';
 
-const APP_NAME = 'Power & Control - Solar Experts';
-
+const METADATA = {
+  Url: 'https://www.pac-electrical.co.uk',
+  SiteName: 'Power & Control - Solar Installers Derby',
+  Description:
+    'Power & Control provide solar panel installations and electrical services across Derbyshire and the East Midlands',
+  Keywords:
+    'solar panels, solar installers, electrical contractors, renewable energy, EV charging, solar PV, solar battery storage, solar grants, solar panel installation, solar panel installers, solar panel company, solar panel cost, solar panel system, solar panel price, solar panel installation cost, solar panel installation near me, solar panel installation companies, solar panel installation companies near me, solar panel installation cost UK, solar panel installation cost near me',
+};
 export const metadata = {
-  applicationName: APP_NAME,
+  generator: 'Next.js',
+  title: METADATA.SiteName,
+  applicationName: METADATA.SiteName,
+  description: METADATA.Description,
+  referrer: 'origin-when-cross-origin',
+  url: METADATA.Url,
+  openGraph: {
+    title: METADATA.SiteName,
+    description: METADATA.Description,
+    url: METADATA.Url,
+    siteName: METADATA.SiteName,
+    images: [
+      {
+        url: 'https://pac-electrical.co.uk/images/headers/powerandcontrolmcs.jpg', // Must be an absolute URL
+        width: 800,
+        height: 600,
+      },
+    ],
+    locale: 'en_GB',
+    type: 'website',
+  },
 };
 
 export const viewport = {
@@ -36,23 +62,7 @@ export default async function RootLayout({ children }) {
         <GoogleAnalytics GA_MEASUREMENT_ID="G-JN7204204E" />
       </Suspense>
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <title>{metadata.applicationName}</title>
         <link rel="stylesheet" href="https://use.typekit.net/xml0rco.css" />
-        <link
-          rel="icon"
-          sizes="192x192"
-          href="/logo/pac-logo-electrical-reverse.svg"
-        />
-        <link
-          rel="apple-touch-icon"
-          href="/logo/pac-logo-electrical-reverse.svg"
-        />
-        <link
-          rel="mask-icon"
-          href="/logo/pac-logo-electrical-reverse.svg"
-          color="var(--navy)"
-        />
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/icon?family=Material+Icons"
