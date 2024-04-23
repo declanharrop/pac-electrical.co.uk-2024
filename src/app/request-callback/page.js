@@ -14,20 +14,21 @@ export default function Callback() {
       .join('&');
 
   const handleSubmit = (e) => {
+    e.preventDefault();
+
     const data = {
       name: e.target.name.value,
       phone: e.target.phone.value,
       email: e.target.email.value,
     };
-    fetch('/request-callback', {
+
+    fetch('/callback-form.html', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({ 'form-name': 'callback-form', ...data }),
     })
       .then(() => router.push('/thank-you'))
       .catch((error) => alert(error));
-
-    e.preventDefault();
   };
 
   const handleChange = (e) =>
