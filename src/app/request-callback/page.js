@@ -19,7 +19,6 @@ export default function Callback() {
       phone: e.target.phone.value,
       email: e.target.email.value,
     };
-    e.preventDefault();
     fetch('/request-callback', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -27,6 +26,8 @@ export default function Callback() {
     })
       .then(() => router.push('/thank-you'))
       .catch((error) => alert(error));
+
+    e.preventDefault();
   };
 
   const handleChange = (e) =>
