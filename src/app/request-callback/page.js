@@ -20,7 +20,7 @@ export default function Callback() {
       email: e.target.email.value,
     };
     e.preventDefault();
-    fetch('/', {
+    fetch('/request-callback', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({ 'form-name': 'callback-form', ...data }),
