@@ -16,18 +16,17 @@ export async function generateMetadata({ params }) {
 
   return {
     title: `${article.title} - Power & Control Ltd`,
-    description: article,
+    description: article.metaDescription,
     url: `https://pac-electrical.co.uk/case-studies/${article.slug}`,
     type: 'article',
     image: article.hero.url,
     openGraph: {
       title: `${article.title} - Power & Control Ltd`,
-      description: article,
+      description: article.metaDescription,
       url: `https://pac-electrical.co.uk/case-studies/${article.slug}`,
       type: 'article',
       article: {
         publishedTime: article.date,
-        section: article.sector,
       },
       images: [
         {

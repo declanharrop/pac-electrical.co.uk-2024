@@ -15,13 +15,13 @@ export async function generateMetadata({ params }) {
   const study = caseStudy.caseStudies[0];
   return {
     title: `${study.title} - Power & Control Ltd`,
-    description: study.metaDesc.substring(0, 160),
+    description: study.metaDesc,
     url: `https://pac-electrical.co.uk/case-studies/${study.slug}`,
     type: 'article',
     image: study.hero.url,
     openGraph: {
       title: `${study.title} - Power & Control Ltd`,
-      description: study.metaDesc.substring(0, 160),
+      description: study.metaDesc,
       url: `https://pac-electrical.co.uk/case-studies/${study.slug}`,
       type: 'article',
       article: {
