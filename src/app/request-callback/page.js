@@ -37,11 +37,6 @@ export default function Callback() {
 
   return (
     <>
-      <Head
-        title="Request a callback | Power and Control"
-        description="Contact us for a free Electrical, EV Charger, Solar and Battery Storage, no-obligation quote today."
-        url="https://pac-electrical.co.uk/request-callback"
-      />
       <Hero
         height="20vh"
         src="/images/page-images/renewables/solar7.jpg"

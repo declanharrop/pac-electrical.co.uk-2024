@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import Head from 'next/head';
 import { useEffect, useState } from 'react';
 import Hero from '../../Components/Hero/Hero';
 import ServiceTemplateStyles from '../../Templates/styles/ServiceTemplate.styles';
@@ -20,11 +19,6 @@ export default function About() {
   }, []);
   return (
     <ServiceTemplateStyles>
-      <Head
-        title="About Us | Power and Control - Electrical Contractors"
-        description="Power and Control electrical contractors specialise in design, installation, and maintenance across domestic, commercial, and industrial sectors."
-        ogImage="/images/page-images/ev-charging/evchex1a.jpg"
-      />
       <Hero
         src="/images/page-images/ev-charging/evchex1a.jpg"
         alt="Power and Control Head Office"
