@@ -8,6 +8,10 @@ export default function Accreds() {
       <img src="/images/accreditations/chasx2.jpg" alt="IPAF" />
       <img src="/images/accreditations/hiesx2.jpg" alt="JIB Member Company" />
       <img
+        src="/images/accreditations/duracell-square.webp"
+        alt="Olev Approved Power and Control"
+      />
+      <img
         src="/images/accreditations/renewable-energy-hub.svg"
         alt="Renewable Energy Hub Power and Control"
       />
