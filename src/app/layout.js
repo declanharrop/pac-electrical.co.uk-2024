@@ -31,7 +31,6 @@ export const metadata = {
     title: METADATA.SiteName,
     description: METADATA.Description,
     url: METADATA.Url,
-    siteName: METADATA.SiteName,
     images: [
       {
         url: 'https://pac-electrical.co.uk/images/headers/powerandcontrolmcs.jpg', // Must be an absolute URL
