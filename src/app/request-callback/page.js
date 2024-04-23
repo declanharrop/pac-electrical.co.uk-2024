@@ -25,7 +25,7 @@ export default function Callback() {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({ 'form-name': 'callback-form', ...data }),
     })
-      // .then(() => router.push('/thank-you'))
+      .then(() => router.push('/thank-you'))
       .catch((error) => alert(error));
 
     e.preventDefault();
