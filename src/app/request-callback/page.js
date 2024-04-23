@@ -51,7 +51,7 @@ export default function Callback() {
         name="callback-form"
         data-netlify="true"
       >
-        <input type="hidden" name="callback-form" value="callback-form" />
+        <input type="hidden" name="form-name" value="callback-form" />
         <label htmlFor="name" aria-label="Name">
           <input
             type="text"

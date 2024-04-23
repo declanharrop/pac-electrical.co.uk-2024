@@ -14,6 +14,8 @@ export default function GetAQuote() {
       .join('&');
 
   const handleSubmit = (e) => {
+    e.preventDefault();
+
     const data = {
       name: e.target.name.value,
       phone: e.target.phone.value,
@@ -25,15 +27,13 @@ export default function GetAQuote() {
       works: e.target.works.value,
     };
 
-    fetch('/', {
+    fetch('/get-a-quote-form.html', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({ 'form-name': 'get-a-quote-form', ...data }),
     })
       .then(() => router.push('/whats-next'))
       .catch((error) => alert(error));
-
-    e.preventDefault();
   };
 
   const handleChange = (e) =>
@@ -57,7 +57,7 @@ export default function GetAQuote() {
         name="get-a-quote-form"
         data-netlify="true"
       >
-        <input type="hidden" name="get-a-quote-form" value="get-a-quote-form" />
+        <input type="hidden" name="form-name" value="get-a-quote-form" />
         <label htmlFor="whatservice" aria-label="Service Required">
           <p>What service do you require?</p>
           <select id="whatservice" name="whatservice" required>
