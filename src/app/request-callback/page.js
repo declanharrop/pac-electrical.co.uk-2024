@@ -3,7 +3,6 @@
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import Hero from '@/Components/Hero/Hero';
-import Head from '@/Elements/Head';
 
 export default function Callback() {
   const router = useRouter();
