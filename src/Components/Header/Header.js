@@ -103,7 +103,7 @@ export default function Header() {
                     toggleMenu();
                   }}
                 >
-                  <Link href="/reviews">Reviews</Link>
+                  <Link href="/solar">Solar</Link>
                 </li>
                 <li
                   onClick={() => {
@@ -161,6 +161,9 @@ export default function Header() {
             </div>
             <div className="links">
               <ul>
+                <li onClick={() => toggleDropdown('')} className="header-link">
+                  <Link href="/solar">Solar</Link>
+                </li>
                 <li
                   className="services-li header-link"
                   // onClick={() => toggleDropdown('services')}
@@ -181,9 +184,6 @@ export default function Header() {
                 </li>
                 <li onClick={() => toggleDropdown('')} className="header-link">
                   <Link href="/about">About Us</Link>
-                </li>
-                <li onClick={() => toggleDropdown('')} className="header-link">
-                  <Link href="/reviews">Reviews</Link>
                 </li>
               </ul>
             </div>
@@ -211,6 +211,12 @@ export default function Header() {
                     <div className="links">
                       <ul>
                         <li
+                          onClick={() => toggleDropdown('')}
+                          className="header-link"
+                        >
+                          <Link href="/solar">Solar</Link>
+                        </li>
+                        <li
                           className="services-li header-link"
                           onClick={() => toggleDropdown('services')}
                           onMouseEnter={() => hoverToggleDropdown('services')}
@@ -237,12 +243,6 @@ export default function Header() {
                           className="header-link"
                         >
                           <Link href="/about">About Us</Link>
-                        </li>
-                        <li
-                          onClick={() => toggleDropdown('')}
-                          className="header-link"
-                        >
-                          <Link href="/reviews">Reviews</Link>
                         </li>
                       </ul>
                     </div>

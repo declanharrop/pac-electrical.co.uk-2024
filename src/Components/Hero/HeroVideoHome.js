@@ -5,7 +5,7 @@ import { HeroVideoHomeStyles } from './HeroVideo.styles.js';
 
 export default function HeroVideoHome({
   videowebm = 'Solar-pac.webm',
-  videomp4 = 'Solar-pac.mp4',
+  videomp4 = 'pac-home-video-new.mp4',
   overlayColor = 'var(--green-50)',
 }) {
   return (
@@ -48,7 +48,7 @@ export default function HeroVideoHome({
       >
         <video autoPlay loop muted playsInline>
           <source src={`/video/${videomp4}`} type="video/mp4" />
-          <source src={`/video/${videowebm}`} type="video/webm" />
+          {/* <source src={`/video/${videowebm}`} type="video/webm" /> */}
         </video>
       </div>
     </HeroVideoHomeStyles>

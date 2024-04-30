@@ -14,7 +14,7 @@ import { LATEST_NEWS_DATA } from '@/Lib/queries';
 
 const METADATA = {
   Url: 'https://www.pac-electrical.co.uk',
-  SiteName: 'Power & Control - Solar Installers Derby',
+  SiteName: 'Solar Installation Derbyshire | Power & Control',
   Description:
     'Power & Control provide solar panel installations and electrical services across Derbyshire and the East Midlands',
   Keywords:
@@ -57,9 +57,6 @@ export default async function RootLayout({ children }) {
   register();
   return (
     <html lang="en">
-      <Suspense>
-        <GoogleAnalytics GA_MEASUREMENT_ID="G-JN7204204E" />
-      </Suspense>
       <head>
         <link rel="stylesheet" href="https://use.typekit.net/xml0rco.css" />
         <link
@@ -79,6 +76,9 @@ export default async function RootLayout({ children }) {
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js" />
       </head>
       <body>
+        <Suspense>
+          <GoogleAnalytics GA_MEASUREMENT_ID="G-JN7204204E" />
+        </Suspense>
         <NextTopLoader color="#74b570" />
         <StyledComponentsRegistry>
           <Globalstyle />

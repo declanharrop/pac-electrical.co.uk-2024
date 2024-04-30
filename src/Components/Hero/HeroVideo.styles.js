@@ -7,34 +7,18 @@ export const HeroVideoStyles = styled.div`
   min-height: 100%;
   width: 100%;
   .overlay-content {
-    .header {
-      font-size: 5rem;
-    }
-    h2 {
-      font-size: 3rem;
-    }
+    padding: 20px;
     img {
-      max-width: 200px;
+      max-width: 140px;
       width: 60vw;
       margin-bottom: 20px;
     }
-  }
-  .lower-buttons {
-    margin-top: 40px;
-    .btns {
-      margin-top: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 20px;
+    h1 {
+      color: white;
     }
-  }
-  @media screen and (max-width: 500px) {
-    .lower-buttons {
-      .btns {
-        gap: 0;
-      }
+    h4 {
+      margin-top: 30px;
+      font-weight: 500;
     }
   }
   .overlay {
@@ -46,31 +30,8 @@ export const HeroVideoStyles = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    h1 {
-      font-size: 7rem;
-      color: white;
-    }
-    @media screen and (max-width: 500px) {
-      h1 {
-        font-size: 7vw;
-      }
-      button {
-        font-size: 1.6rem;
-        letter-spacing: 0.3rem;
-        margin: 10px;
-      }
-    }
   }
-  @media screen and (max-width: 820px) {
-    .overlay {
-      h1 {
-        font-size: 8vw;
-      }
-    }
-  }
-  @media screen and (max-width: 560px) {
-    width: 100%;
-  }
+
   .video {
     background-repeat: no-repeat;
     background-attachment: fixed;

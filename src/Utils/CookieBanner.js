@@ -16,14 +16,14 @@ export default function CookieBanner() {
 
   useEffect(() => {
     const newValue = cookieConsent ? 'granted' : 'denied';
-
-    window.gtag('consent', 'update', {
-      ad_user_data: newValue,
-      ad_personalization: newValue,
-      ad_storage: newValue,
-      analytics_storage: newValue,
-    });
-
+    if (typeof window.gtag !== 'undefined') {
+      window.gtag('consent', 'update', {
+        ad_user_data: newValue,
+        ad_personalization: newValue,
+        ad_storage: newValue,
+        analytics_storage: newValue,
+      });
+    }
     setLocalStorage('cookie_consent', cookieConsent);
   }, [cookieConsent]);
 
