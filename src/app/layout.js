@@ -14,7 +14,7 @@ import { LATEST_NEWS_DATA } from '@/Lib/queries';
 
 const METADATA = {
   Url: 'https://www.pac-electrical.co.uk',
-  SiteName: 'Solar Installation Derbyshire | Power & Control',
+  SiteName: 'Power & Control - Solar Experts Derbyshire',
   Description:
     'Power & Control provide solar panel installations and electrical services across Derbyshire and the East Midlands',
   Keywords:

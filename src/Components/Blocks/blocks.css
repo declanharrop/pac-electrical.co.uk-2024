@@ -189,6 +189,45 @@
 
 }
 
+.video-side-block {
+  padding: 50px 10px;
+
+  .left-video-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-gap: 40px;
+  }
+
+  .right-video-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-gap: 40px;
+
+    .text {
+      order: 1;
+    }
+  }
+
+  .text {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .video {
+    iframe {
+      width: 100%;
+      min-height: 400px;
+    }
+  }
+}
+
 @media screen and (max-width: 600px) {
   .explore-container {
     .explore-buttons {

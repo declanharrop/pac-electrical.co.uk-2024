@@ -1,4 +1,5 @@
-import Hero from '@/Components/Hero/Hero';
+import ExploreBlock from '@/Components/Blocks/Explore';
+import StandardHeroVideo from '@/Components/Hero/StandardHeroVideo';
 
 export const metadata = {
   title: 'Thank You - Power & Control Ltd',
@@ -21,14 +22,22 @@ export const metadata = {
 };
 export default function ThankYou() {
   return (
-    <Hero height="40vh" src="/images/page-images/renewables/pac-24-barn.webp">
-      <div className="decorated-title">
-        <h1>Thank You</h1>
-        <p>
-          Thank you for requesting a callback - Lets continue your journey
-          towards a more sustainable future
-        </p>
-      </div>
-    </Hero>
+    <>
+      <StandardHeroVideo
+        videomp4="pac-home-video-new.mp4"
+        videowebm="pac-solarpage-video.webm"
+        overlayColor="var(--green-50)"
+        height="50vh"
+      >
+        <div className="decorated-header">
+          <h1>Thank you</h1>
+          <p>
+            Thank you for requesting a callback - Lets continue your journey
+            towards a more sustainable future.
+          </p>
+        </div>
+      </StandardHeroVideo>
+      <ExploreBlock />
+    </>
   );
 }

@@ -59,7 +59,7 @@ export default function DomesticSolarPage() {
           our user-friendly smart monitoring system.
         </p>
       </VideoContentBlock>
-      <ExploreBlock />
+      {/* <ExploreBlock /> */}
       <BenefitsBlock data={DomesticSolarData[0]} />
       <SliderBlock />
       <Accordian data={DomesticSolarData[1].content} color="var(--green)" />
