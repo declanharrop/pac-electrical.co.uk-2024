@@ -83,7 +83,7 @@ export default function ThreeImageSection() {
           background: 'var(--green-75)',
           logo: 'pac-logo-renewable-reverse.svg',
           text: 'We are experienced solar PV installers helping you make the most of renewable energy to reduce costs and improve your carbon footprint.',
-          link: '/renewables',
+          link: '/solar',
           webm: '/video/pac-renewable2.webm',
           mp4: '/video/pac-renewable2.mp4',
         }}

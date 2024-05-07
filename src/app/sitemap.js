@@ -25,6 +25,11 @@ export default async function sitemap() {
 
   const routes = [
     '',
+    '/solar',
+    '/solar/commercial',
+    '/solar/domestic',
+    '/solar/about-solar',
+    '/solar/our-process',
     '/about',
     '/case-studies',
     '/electrical',

@@ -3,7 +3,6 @@ import Link from 'next/link';
 import Skew from '@/Components/ContentSections/Skew';
 import ThreeImageSection from '@/Components/ContentSections/ThreeImageSection';
 import HeroVideoHome from '@/Components/Hero/HeroVideoHome';
-import Head from '@/Elements/Head';
 import LatestNewsHome from '@/Components/LatestNewsSections/LatestNewsHome';
 import { getClient } from '@/Lib/client';
 import { LATEST_NEWS_DATA } from '@/Lib/queries';

@@ -228,10 +228,11 @@ const HeaderStyles = styled.header`
     display: flex;
     align-items: center;
     gap: 4px;
+    margin-right: -10px;
   }
   li {
     /* font-family: good-times; */
-    font-size: 1.9rem;
+    font-size: 1.7rem;
     cursor: pointer;
     a {
       cursor: pointer;
@@ -247,6 +248,7 @@ const HeaderStyles = styled.header`
     font-family: good-times;
     a {
       font-family: good-times;
+      font-size: 1.7rem;
     }
   }
   .logo {
@@ -267,6 +269,7 @@ const HeaderStyles = styled.header`
       font-family: good-times;
       a {
         font-family: good-times;
+        font-size: 1.7rem;
       }
     }
     .services-li {
