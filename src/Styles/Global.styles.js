@@ -86,25 +86,25 @@ const Globalstyle = createGlobalStyle`
   }
 
   .secondary-button {
-   background: none;
-   border: 2px solid white;
-   color: white;
-   &:hover {
-    border: 2px solid var(--green);
-    background: var(--green);
-   }
+    background: none;
+    border: 2px solid white;
+    color: white;
+    &:hover {
+      border: 2px solid var(--green);
+      background: var(--green);
+    }
   }
 
   .secondary-button-alternate {
-   background: none;
-   border: 2px solid var(--green);
+    background: none;
+    border: 2px solid var(--green);
    color: var(--green);
    &:hover {
-    border: 2px solid var(--green);
-    background: var(--green);
+     border: 2px solid var(--green);
+     background: var(--green);
    }
   }
-
+  
   .light-button {
     background: none;
     color: white;
@@ -114,6 +114,18 @@ const Globalstyle = createGlobalStyle`
       color: var(--green);
     }
   }
+  @media screen and (max-width: 600px){
+    .focus-button {
+      font-size: 1.5rem;
+      padding: 10px 15px;
+    }
+    .secondary-button {
+      font-size: 1.5rem;
+      padding: 10px 15px;
+    }
+  }
+
+
 
   .buttons {
     display: flex;
@@ -171,6 +183,23 @@ const Globalstyle = createGlobalStyle`
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
+  }
+  .decorated-header {
+    border-left: 3px solid white;
+    text-align: left;
+    padding-left: 10px;
+    h1 {
+      color: white;
+      margin-left: 4px;
+    }
+    p {
+      color: white;
+      font-size: 2rem; 
+      margin-left: 4px;
+    }
+    .buttons {
+      margin-top: 20px;
+    }
   }
   .contractor-section {
     h2 {

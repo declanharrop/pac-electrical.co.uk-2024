@@ -53,20 +53,19 @@ const Typography = createGlobalStyle`
     text-transform: uppercase;
   }
   h4 {
+    text-transform: none;
+    letter-spacing: 0.1rem;
+    font-weight: 500;
     margin: 10px 0;
-    font-size: 2.2rem;
-    letter-spacing: 0.3rem;
+    font-size: 2.6rem;
     line-height: 1.4;
-    font-weight: 400;
-    text-transform: uppercase;
   }
   h5 {
     margin: 10px 0;
     letter-spacing: 0.2rem;
     font-size: 2rem;
     line-height: 1.4;
-    font-weight:400;
-    text-transform: uppercase;
+    font-weight: 600;
   }
   a {
     font-family: 'Urbanist', sans-serif;

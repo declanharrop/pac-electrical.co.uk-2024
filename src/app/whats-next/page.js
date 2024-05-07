@@ -1,4 +1,5 @@
-import Hero from '@/Components/Hero/Hero';
+import Link from 'next/link';
+import StandardHeroVideo from '@/Components/Hero/StandardHeroVideo';
 
 export const metadata = {
   title: 'What happens now? - Power & Control Ltd',
@@ -22,11 +23,26 @@ export const metadata = {
 
 export default function WhatHappensNext() {
   return (
-    <Hero height="40vh" src="/images/page-images/renewables/pac-24-barn.webp">
-      <div className="decorated-title">
+    <StandardHeroVideo
+      videomp4="pac-home-video-new.mp4"
+      videowebm="pac-solarpage-video.webm"
+      overlayColor="var(--green-50)"
+      height="80vh"
+    >
+      <div className="decorated-header">
         <h1>What happens now?</h1>
         <p>Let us run you through our quote procedure</p>
+        <Link href="/solar/our-process">
+          <button
+            style={{ marginTop: '30px' }}
+            aria-label="Request a callback"
+            type="button"
+            className="home-callback secondary-button"
+          >
+            Explore our process
+          </button>
+        </Link>
       </div>
-    </Hero>
+    </StandardHeroVideo>
   );
 }
