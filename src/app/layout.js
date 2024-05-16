@@ -77,7 +77,7 @@ export default async function RootLayout({ children }) {
       </head>
       <body>
         <Suspense>
-          <GoogleAnalytics GA_MEASUREMENT_ID="G-JN7204204E" />
+          <GoogleAnalytics GA_MEASUREMENT_ID="G-07HW5JDB5D" />
         </Suspense>
         <NextTopLoader color="#74b570" />
         <StyledComponentsRegistry>
