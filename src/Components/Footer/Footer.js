@@ -7,6 +7,7 @@ import LogoSection from './LogoSection';
 import Contact from './Contact';
 import Sitemap from './Sitemap';
 import LatestStoryStudy from './LatestStoryStudy';
+import Reviews from './Reviews';
 
 export default function Footer({ data }) {
   const [active, setActive] = useState(false);
@@ -27,6 +28,7 @@ export default function Footer({ data }) {
     <>
       {active && <LatestStoryStudy data={data} />}
       <FooterStyles>
+        <Reviews />
         <div className="stripe">
           <svg height="100%" width="100%">
             <defs>
