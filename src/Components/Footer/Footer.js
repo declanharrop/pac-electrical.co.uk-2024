@@ -2,6 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 import { use, useState, useEffect } from 'react';
+import Script from 'next/script';
 import { FooterStyles } from './Footer.styles';
 import LogoSection from './LogoSection';
 import Contact from './Contact';
@@ -114,6 +115,20 @@ export default function Footer({ data }) {
             </div>
           </div>
         </div>
+        <Script
+          afterInteractive
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.addEventListener('load',function(){
+                jQuery('body').on('click','[href="tel:+441332552320"]',function(){
+                  gtag("event", "Tel_Click", {
+                })
+                jQuery('body').on('click','[href="mailto:enquiries@pac-electrical.co.uk"]',function(){
+                  gtag("event", "Mail_Click", {
+                })
+              })`,
+          }}
+        />
       </FooterStyles>
     </>
   );
