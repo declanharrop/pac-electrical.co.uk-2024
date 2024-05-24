@@ -119,14 +119,26 @@ export default function Footer({ data }) {
           afterInteractive
           dangerouslySetInnerHTML={{
             __html: `
-              window.addEventListener('load',function(){
-                jQuery('body').on('click','[href="tel:+441332552320"]',function(){
-                  gtag("event", "Tel_Click", {
+              window.addEventListener('load', function () {
+                document.querySelectorAll('[href="tel:+441332552320"]').forEach(function(check){
+                    check.onmousedown = function(){
+                      gtag("event", "Tel_Click")
+                    }
+                  })
+              });`,
+          }}
+        />
+        <Script
+          afterInteractive
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.addEventListener('load', function () {
+                document.querySelectorAll('[href="mailto:enquiries@pac-electrical.co.uk"]').forEach(function(check){
+                  check.onmousedown = function(){
+                    gtag("event", "Mail_Click",)
+                  }
                 })
-                jQuery('body').on('click','[href="mailto:enquiries@pac-electrical.co.uk"]',function(){
-                  gtag("event", "Mail_Click", {
-                })
-              })`,
+              });`,
           }}
         />
       </FooterStyles>
