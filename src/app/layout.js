@@ -21,7 +21,6 @@ const METADATA = {
     'solar panels, solar installers, electrical contractors, renewable energy, EV charging, solar PV, solar battery storage, solar grants, solar panel installation, solar panel installers, solar panel company, solar panel cost, solar panel system, solar panel price, solar panel installation cost, solar panel installation near me, solar panel installation companies, solar panel installation companies near me, solar panel installation cost UK, solar panel installation cost near me',
 };
 export const metadata = {
-  generator: 'Next.js',
   title: METADATA.SiteName,
   applicationName: METADATA.SiteName,
   description: METADATA.Description,
