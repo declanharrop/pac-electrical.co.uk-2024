@@ -43,7 +43,7 @@ export default function HeroVideoHome({
         className="video"
         style={{
           backgroundImage:
-            'url(../../images/page-images/ev-charging/evchex1.jpg)',
+            'url(../../images/page-images/ev-charging/evchex1.webp)',
         }}
       >
         <video autoPlay loop muted playsInline>
