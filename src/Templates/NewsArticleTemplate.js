@@ -7,6 +7,7 @@ import Head from '../Elements/Head';
 import CaseStudySlider from '../Components/Sliders/CaseStudySlider';
 import formatDate from '../Lib/formatDate';
 import ColorButton from '../Elements/ColorButton';
+import SliderBlock from '@/Components/Blocks/SliderBlock';
 
 export default function NewsArticleTemplate({ data }) {
   return (
@@ -64,9 +65,7 @@ export default function NewsArticleTemplate({ data }) {
             <div dangerouslySetInnerHTML={{ __html: data.content.html }} />
           </div>
         </div>
-        {data.slideshow.length >= 1 && (
-          <CaseStudySlider content={data.slideshow} />
-        )}
+        {data.slideshow.length >= 1 && <SliderBlock images={data.slideshow} />}
         <div
           className="buttons"
           style={{ justifyContent: 'center', margin: '40px 0 0' }}

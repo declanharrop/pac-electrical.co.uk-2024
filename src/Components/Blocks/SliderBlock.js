@@ -19,25 +19,21 @@ import './blocks.css';
 export default function SliderBlock({
   images = [
     {
-      src: '/images/page-images/renewables/domestic-solar-pv-installation/domsolar.jpg',
-      url: '',
+      url: '/images/page-images/renewables/domestic-solar-pv-installation/domsolar.jpg',
     },
-    { src: '/images/page-images/renewables/Solar7.jpg', url: '' },
-    { src: '/images/page-images/renewables/solar2.webp', url: '' },
+    { url: '/images/page-images/renewables/Solar7.jpg' },
+    { url: '/images/page-images/renewables/solar2.webp' },
     {
-      src: '/images/page-images/renewables/domestic-solar-pv-installation/domsolar1.jpg',
-      url: '',
+      url: '/images/page-images/renewables/domestic-solar-pv-installation/domsolar1.jpg',
     },
-    { src: '/images/page-images/renewables/Solar9.jpg', url: '' },
-    { src: '/images/page-images/renewables/Solar 8.jpg', url: '' },
+    { url: '/images/page-images/renewables/Solar9.jpg' },
+    { url: '/images/page-images/renewables/Solar 8.jpg' },
     {
-      src: '/images/page-images/renewables/domestic-solar-pv-installation/domsolar2.jpg',
-      url: '',
+      url: '/images/page-images/renewables/domestic-solar-pv-installation/domsolar2.jpg',
     },
-    { src: '/images/page-images/renewables/solar1.webp', url: '' },
+    { url: '/images/page-images/renewables/solar1.webp' },
     {
-      src: '/images/page-images/renewables/domestic-solar-pv-installation/domsolar3.jpg',
-      url: '',
+      url: '/images/page-images/renewables/domestic-solar-pv-installation/domsolar3.jpg',
     },
   ],
 }) {
@@ -68,7 +64,7 @@ export default function SliderBlock({
       >
         {images.map((slide, i) => (
           <SwiperSlide key={i}>
-            <img src={slide.src} alt="" />
+            <img src={slide.url} alt="" />
           </SwiperSlide>
         ))}
       </Swiper>
