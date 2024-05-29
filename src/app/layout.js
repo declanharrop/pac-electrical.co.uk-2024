@@ -73,10 +73,10 @@ export default async function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet"
         />
-        <Script
+        {/* <Script
           afterInteractive
           src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"
-        />
+        /> */}
       </head>
       <body>
         <Suspense>
