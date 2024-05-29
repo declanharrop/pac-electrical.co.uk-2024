@@ -33,6 +33,12 @@ export const FooterStyles = styled.div`
     min-height: 300px;
     position: relative;
   }
+  .rev {
+    h3 {
+      margin: 30px 0 20px;
+    }
+    margin-bottom: 60px;
+  }
 `;
 
 export const SitemapStyles = styled.div`
