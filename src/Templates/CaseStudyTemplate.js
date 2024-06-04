@@ -7,6 +7,7 @@ import Head from '../Elements/Head';
 import Hero from '../Components/Hero/Hero';
 import CaseStudySlider from '../Components/Sliders/CaseStudySlider';
 import ColorButton from '../Elements/ColorButton';
+import SliderBlock from '@/Components/Blocks/SliderBlock';
 
 export default function CaseStudyTemplate({ study }) {
   return (
@@ -106,7 +107,7 @@ export default function CaseStudyTemplate({ study }) {
       </CaseStudyTemplateStyles>
       {study.slideshow.length >= 1 && (
         <>
-          <CaseStudySlider content={study.slideshow} />
+          <SliderBlock images={study.slideshow} />
           <div className="spacer-md" />
         </>
       )}
