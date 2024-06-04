@@ -33,31 +33,31 @@ export default function CaseStudyTemplate({ study }) {
         <div className="detail-section">
           {study.client && (
             <div className="detail">
-              <h5>Client</h5>
+              <h5>CLIENT</h5>
               <h4>{study.client}</h4>
             </div>
           )}
           {study.sector && (
             <div className="detail">
-              <h5>Sector</h5>
+              <h5>SECTOR</h5>
               <h4>{study.sector}</h4>
             </div>
           )}
           {study.technology && (
             <div className="detail">
-              <h5>Technology</h5>
+              <h5>TECHNOLOGY</h5>
               <h4>{study.technology}</h4>
             </div>
           )}
           {study.systemSize && (
             <div className="detail">
-              <h5>System Size</h5>
+              <h5>SYSTEM SIZE</h5>
               <h4>{study.systemSize}</h4>
             </div>
           )}
           {study.paybackPeriod && (
             <div className="detail">
-              <h5>Payback Period</h5>
+              <h5>PAYBACK PERIOD</h5>
               <h4>{study.paybackPeriod}</h4>
             </div>
           )}
@@ -81,7 +81,7 @@ export default function CaseStudyTemplate({ study }) {
           )}
           {study.installed && (
             <div className="detail products">
-              <h5>Products</h5>
+              <h5>PRODUCTS</h5>
               <h4>{study.installed}</h4>
             </div>
           )}
