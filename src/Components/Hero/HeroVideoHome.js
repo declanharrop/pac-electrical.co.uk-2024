@@ -17,15 +17,6 @@ export default function HeroVideoHome({
               Start Your Solar Journey Today
             </h1>
             <div className="buttons">
-              <Link href="/request-callback">
-                <button
-                  aria-label="Request a callback"
-                  type="button"
-                  className="home-callback secondary-button"
-                >
-                  Request a callback
-                </button>
-              </Link>
               <Link href="/get-a-quote">
                 <button
                   aria-label="Get a quote"

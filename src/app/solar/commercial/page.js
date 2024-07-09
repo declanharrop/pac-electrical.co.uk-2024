@@ -26,15 +26,6 @@ export default function DomesticSolarPage() {
           <h1>Commercial Solar</h1>
           <p>This is the perfect time to invest in solar energy.</p>
           <div className="buttons">
-            <Link href="/request-callback">
-              <button
-                aria-label="Request a callback"
-                type="button"
-                className="home-callback secondary-button"
-              >
-                Request a callback
-              </button>
-            </Link>
             <Link href="/get-a-quote">
               <button
                 aria-label="Get a quote"
