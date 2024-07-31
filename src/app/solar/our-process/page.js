@@ -8,5 +8,9 @@ export const metadata = {
   url: 'https://pac-electrical.co.uk/solar/our-process',
 };
 export default function OurProcess() {
-  return <SolarJourney data={OurProcessData} />;
+  return (
+    <SolarJourney title="Our Process" subtitle="Our Process">
+      <h1>Solar</h1>
+    </SolarJourney>
+  );
 }

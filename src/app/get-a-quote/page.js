@@ -46,7 +46,7 @@ export default function GetAQuote() {
         description="Contact us for a free Electrical, EV Charger, Solar and Battery Storage, no-obligation quote today."
         url="https://pac-electrical.co.uk/get-a-quote"
       />
-      <Hero height="20vh">
+      <Hero height="20vh" src="/images/page-images/ev-charging/evchex1.webp">
         <div className="decorated-title">
           <h1>Get a Quote</h1>
         </div>

@@ -35,6 +35,15 @@ export default function DomesticSolarPage() {
                 Get a quote
               </button>
             </Link>
+            <Link href="/solar/our-process">
+              <button
+                aria-label="Get a quote"
+                type="button"
+                className="home-getaquote secondary-button"
+              >
+                Our Solar Process
+              </button>
+            </Link>
           </div>
         </div>
       </StandardHeroVideo>
