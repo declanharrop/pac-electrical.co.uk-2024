@@ -98,18 +98,6 @@ export default function QuoteThreeImageSection() {
       />
       <ImageSection
         data={{
-          title: 'EV Charging Solutions',
-          color: 'var(--neon)',
-          background: 'var(--neon-75)',
-          logo: 'pac-logo-evcharging-reverse.svg',
-          text: '',
-          link: '/get-a-quote/ev-charger',
-          webm: '/video/pac-evchargingsmall.webm',
-          mp4: '/video/pac-evchargingsmall.mp4',
-        }}
-      />
-      <ImageSection
-        data={{
           title: 'Electrical Services',
           color: 'var(--navy)',
           background: 'var(--navy-75)',
@@ -118,6 +106,18 @@ export default function QuoteThreeImageSection() {
           link: '/get-a-quote/electrical',
           webm: '/video/pac-electrical.webm',
           mp4: '/video/pac-electrical.mp4',
+        }}
+      />
+      <ImageSection
+        data={{
+          title: 'EV Charging Solutions',
+          color: 'var(--neon)',
+          background: 'var(--neon-75)',
+          logo: 'pac-logo-evcharging-reverse.svg',
+          text: '',
+          link: '/get-a-quote/ev-charger',
+          webm: '/video/pac-evchargingsmall.webm',
+          mp4: '/video/pac-evchargingsmall.mp4',
         }}
       />
     </ThreeImageSectionStyles>

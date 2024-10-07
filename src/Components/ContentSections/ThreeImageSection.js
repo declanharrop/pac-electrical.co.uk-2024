@@ -78,7 +78,19 @@ export default function ThreeImageSection() {
     <ThreeImageSectionStyles>
       <ImageSection
         data={{
-          title: 'Solar',
+          title: 'Commercial Electrical',
+          color: 'var(--navy)',
+          background: 'var(--navy-75)',
+          logo: 'pac-logo-electrical-reverse.svg',
+          text: 'From electrical installations to repair and maintenance services, we can provide electrical solutions for both commercial and domestic properties',
+          link: '/electrical',
+          webm: '/video/pac-electrical.webm',
+          mp4: '/video/pac-electrical.mp4',
+        }}
+      />
+      <ImageSection
+        data={{
+          title: 'Domestic & Comercial Solar',
           color: 'var(--green)',
           background: 'var(--green-75)',
           logo: 'pac-logo-renewable-reverse.svg',
@@ -90,7 +102,7 @@ export default function ThreeImageSection() {
       />
       <ImageSection
         data={{
-          title: 'EV Charging',
+          title: 'EV Charging Solutions',
           color: 'var(--neon)',
           background: 'var(--neon-75)',
           logo: 'pac-logo-evcharging-reverse.svg',
@@ -98,18 +110,6 @@ export default function ThreeImageSection() {
           link: '/ev-charging',
           webm: '/video/pac-evchargingsmall.webm',
           mp4: '/video/pac-evchargingsmall.mp4',
-        }}
-      />
-      <ImageSection
-        data={{
-          title: 'Electrical',
-          color: 'var(--navy)',
-          background: 'var(--navy-75)',
-          logo: 'pac-logo-electrical-reverse.svg',
-          text: 'From electrical installations to repair and maintenance services, we can provide electrical solutions for both commercial and domestic properties',
-          link: '/electrical',
-          webm: '/video/pac-electrical.webm',
-          mp4: '/video/pac-electrical.mp4',
         }}
       />
     </ThreeImageSectionStyles>

@@ -14,7 +14,7 @@ export default function HeroVideoHome({
         <div className="max-width">
           <div className="standard-title">
             <h1 style={{ marginBottom: '20px' }}>
-              Start Your Solar Journey Today
+              Power & Control Electrical & Renewables
             </h1>
             <div className="buttons">
               <Link href="/get-a-quote">
@@ -23,7 +23,16 @@ export default function HeroVideoHome({
                   type="button"
                   className="home-getaquote focus-button"
                 >
-                  Get a quote
+                  Solar
+                </button>
+              </Link>
+              <Link href="/electrical">
+                <button
+                  aria-label="Get a quote"
+                  type="button"
+                  className="home-getaquote secondary-button"
+                >
+                  Commercial Electrical
                 </button>
               </Link>
             </div>
