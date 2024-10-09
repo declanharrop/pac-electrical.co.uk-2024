@@ -43,13 +43,25 @@ export default function Header() {
     <HeaderStyles>
       <div className={width < 800 ? 'mobile-social-bar' : 'social-bar'}>
         <div className="social-links">
-          <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.facebook.com/powerandcontrolltd"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src="/icons/facebook.svg" alt="Facebook Icon" />
           </a>
-          <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.instagram.com/pacrenewable/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src="/icons/instagram.svg" alt="Instagram Icon" />
           </a>
-          <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.linkedin.com/company/powerandcontrolelectricalcontractors/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src="/icons/linkedin.svg" alt="LinkedIn Icon" />
           </a>
         </div>
