@@ -17,7 +17,7 @@ export default function page() {
             Managing Director
           </h4>
           <div className={Styles.ContactCard__Container__Upper__AddContact}>
-            <a href="/data/contact-cards/daniel_kelly.vcf">
+            <a href="/data/contact-cards/daniel_kelly.vcf" download>
               <button
                 type="button"
                 className={
