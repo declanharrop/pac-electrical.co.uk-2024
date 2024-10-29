@@ -8,16 +8,16 @@ export default function page() {
           <img
             className={Styles.ContactCard__Container__Upper__ProfilePhoto}
             src="/images/team/ph.svg"
-            alt="Ben Thorburn"
+            alt="Jake Kinnerley"
           />
           <h2 className={Styles.ContactCard__Container__Upper__Name}>
-            Ben Thorburn
+            Jake Kinnerley
           </h2>
           <h4 className={Styles.ContactCard__Container__Upper__Job}>
-            Project Manager
+            Junior Project Manager
           </h4>
           <div className={Styles.ContactCard__Container__Upper__AddContact}>
-            <a href="/data/contact-cards/ben_thorburn.vcf" download>
+            <a href="/data/contact-cards/jake_kinnerley.vcf" download>
               <button
                 type="button"
                 className={
@@ -93,13 +93,13 @@ export default function page() {
                 >
                   Email
                 </p>
-                <a href="mailto:ben@pac-electrical.co.uk">
+                <a href="mailto:jake@pac-electrical.co.uk">
                   <h4
                     className={
                       Styles.ContactCard__Container__Lower__Contact__Item__Text__Content
                     }
                   >
-                    ben@pac-electrical.co.uk
+                    jake@pac-electrical.co.uk
                   </h4>
                 </a>
               </div>

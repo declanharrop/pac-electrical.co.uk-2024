@@ -1,12 +1,12 @@
 BEGIN:VCARD
 VERSION:3.0
 PRODID:-//QR-Code-Generator.com//EN
-N:Kelly;Daniel;;;
-FN:Daniel
-SN:Kelly
+N:Jake;Kinnerley;;;
+FN:Jake
+SN:Kinnerley
 ORG:Power & Control Ltd;
-TITLE:Managing Director
-EMAIL;TYPE=PREF,INTERNET:dan@pac-electrical.co.uk
+TITLE:Junior Project Manager
+EMAIL;TYPE=PREF,INTERNET:jake@pac-electrical.co.uk
 TEL;TYPE=CELL,voice:
 TEL;TYPE=WORK,voice:+441332552320
 TEL;TYPE=WORK,fax:

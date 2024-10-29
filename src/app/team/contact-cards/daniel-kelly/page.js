@@ -46,7 +46,7 @@ export default function page() {
                   Styles.ContactCard__Container__Lower__Contact__Item__Icon
                 }
                 src="/icons/phone.svg"
-                alt="Email"
+                alt="Phone"
               />
               <div
                 className={
