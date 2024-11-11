@@ -1,0 +1,30 @@
+.ProgressBar {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  height: 10px;
+  background-color: var(--navy);
+}
+
+.Container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.CentralSection {
+  margin-top: 30px;
+}
+
+.ProgressButton {
+  position: absolute;
+  bottom: 50px;
+  /* margin: 0 auto; */
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+
+}
