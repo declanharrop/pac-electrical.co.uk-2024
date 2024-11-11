@@ -12,6 +12,7 @@ import GoogleAnalytics from '@/Utils/GoogleAnalytics';
 import CookieBanner from '@/Utils/CookieBanner';
 import { getClient } from '@/Lib/client';
 import { LATEST_NEWS_DATA } from '@/Lib/queries';
+import FacebookPixel from '@/Utils/FacebookPixel';
 
 const METADATA = {
   Url: 'https://www.pac-electrical.co.uk',
@@ -79,6 +80,13 @@ export default async function RootLayout({ children }) {
         /> */}
       </head>
       <body>
+        <Script id="gtm" strategy="beforeInteractive">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KG2WZ9N');`}
+        </Script>
         <Suspense>
           <GoogleAnalytics GA_MEASUREMENT_ID="G-07HW5JDB5D" />
         </Suspense>
@@ -95,24 +103,6 @@ export default async function RootLayout({ children }) {
         </StyledComponentsRegistry>
         <div id="modal-root" />
       </body>
-      <Script
-        afterInteractive
-        id="facebook-pixel"
-        dangerouslySetInnerHTML={{
-          __html: `
-            !function(f,b,e,v,n,t,s)
-            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-            n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)}(window, document,'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '1631848277627045');
-            fbq('track', 'PageView');
-          `,
-        }}
-      />
     </html>
   );
 }
