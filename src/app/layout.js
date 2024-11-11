@@ -12,7 +12,6 @@ import GoogleAnalytics from '@/Utils/GoogleAnalytics';
 import CookieBanner from '@/Utils/CookieBanner';
 import { getClient } from '@/Lib/client';
 import { LATEST_NEWS_DATA } from '@/Lib/queries';
-import FacebookPixel from '@/Utils/FacebookPixel';
 
 const METADATA = {
   Url: 'https://www.pac-electrical.co.uk',
