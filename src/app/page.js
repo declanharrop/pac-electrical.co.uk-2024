@@ -1,63 +1,95 @@
-// import Version from '@/Components/Version';
-import Link from 'next/link';
-import Skew from '@/Components/ContentSections/Skew';
-import ThreeImageSection from '@/Components/ContentSections/ThreeImageSection';
-import HeroVideoHome from '@/Components/Hero/HeroVideoHome';
-import LatestNewsHome from '@/Components/LatestNewsSections/LatestNewsHome';
-import { getClient } from '@/Lib/client';
-import { LATEST_NEWS_DATA } from '@/Lib/queries';
+import Image from "next/image";
+import styles from "./page.module.css";
 
-export default async function Page() {
-  const client = getClient();
-
-  const { data: featuredNewsData } = await client.query({
-    query: LATEST_NEWS_DATA,
-  });
-
+export default function Home() {
   return (
-    <div>
-      {/* <Head /> */}
-      <HeroVideoHome />
-      <ThreeImageSection />
-      <LatestNewsHome data={featuredNewsData} />
-      <Skew background="var(--navy)">
-        <div className="contractor-section">
-          <h2>Experienced Electrical Contractors</h2>
-          <p>
-            At Power and Control, we are committed to providing innovative and
-            top-quality results to our clients. Specialising in renewables, EV
-            charging solutions and energy efficient electrical installations, we
-            can help you reduce energy bills in your home or workspace.{' '}
-          </p>
-          <p>
-            Whether you need fault finding, repairs, or a large-scale solar PV
-            installation, providing a trusted and reliable service to meet the
-            highest standards. We provide a turnkey solution from design to
-            installation, managing the project from start to finish.{' '}
-          </p>
-          <p>
-            Based in the East Midlands, we are perfectly placed to carry out
-            commercial contracting works across the country.{' '}
-          </p>
+    <div className={styles.page}>
+      <main className={styles.main}>
+        <Image
+          className={styles.logo}
+          src="/next.svg"
+          alt="Next.js logo"
+          width={180}
+          height={38}
+          priority
+        />
+        <ol>
+          <li>
+            Get started by editing <code>src/app/page.js</code>.
+          </li>
+          <li>Save and see your changes instantly.</li>
+        </ol>
+
+        <div className={styles.ctas}>
+          <a
+            className={styles.primary}
+            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              className={styles.logo}
+              src="/vercel.svg"
+              alt="Vercel logomark"
+              width={20}
+              height={20}
+            />
+            Deploy now
+          </a>
+          <a
+            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.secondary}
+          >
+            Read our docs
+          </a>
         </div>
-        <div className="buttons-flex">
-          <Link href="/about">
-            <button type="button" className="light-button">
-              About Us
-            </button>
-          </Link>
-          <Link href="/case-studies">
-            <button type="button" className="light-button">
-              Case Studies
-            </button>
-          </Link>
-          <Link href="/news">
-            <button type="button" className="light-button">
-              Latest News
-            </button>
-          </Link>
-        </div>
-      </Skew>
+      </main>
+      <footer className={styles.footer}>
+        <a
+          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            aria-hidden
+            src="/file.svg"
+            alt="File icon"
+            width={16}
+            height={16}
+          />
+          Learn
+        </a>
+        <a
+          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            aria-hidden
+            src="/window.svg"
+            alt="Window icon"
+            width={16}
+            height={16}
+          />
+          Examples
+        </a>
+        <a
+          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            aria-hidden
+            src="/globe.svg"
+            alt="Globe icon"
+            width={16}
+            height={16}
+          />
+          Go to nextjs.org →
+        </a>
+      </footer>
     </div>
   );
 }
